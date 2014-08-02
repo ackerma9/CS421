@@ -1,0 +1,135 @@
+
+mp7 grade report for ackerma9
+================================
+
+Latest handin (graded copy) was - on_time
+
+*Regular Problems:
+Grading script score  => [0 / 77]
+Late Penalty          => 0
+Point adjustments     => 0
+Total                 => 0
+
+*Extra Credit:
+Grading script score for extra credit => [0 / 10]
+Late Penalty for extra credit         => 0
+Point adjustments for extra credit    => 0
+Total extra credit                    => 0
+
+
+mp7grader program output
+---------------------
+
+
+[0 / 0] asMonoTy1 () (student solution timed out / exception thrown)
+[0 / 0] asMonoTy2 () (student solution timed out / exception thrown)
+[0 / 0] asMonoTy3 () (student solution timed out / exception thrown)
+[0 / 0] asMonoTy4 () (student solution timed out / exception thrown)
+[0 / 1] subst_fun [] (student solution timed out / exception thrown)
+[0 / 1] subst_fun [(5, mk_fun_ty bool_ty (TyVar(2)))] (student solution timed out / exception thrown)
+[0 / 1] subst_fun [(1, TyConst("bool", []))] (student solution timed out / exception thrown)
+[0 / 1] subst_fun [(5, TyConst("->", [TyConst("bool", []); TyVar 2])); (1, TyConst("bool", []))] (student solution timed out / exception thrown)
+[0 / 1] monoTy_lift_subst [] (TyConst("->", [TyVar 1; TyVar 5])) (student solution timed out / exception thrown)
+[0 / 1] monoTy_lift_subst [(5, TyConst("->", [TyConst("bool", []); TyVar 2]))] (TyConst("->", [TyVar 1; TyVar 5])) (student solution timed out / exception thrown)
+[0 / 1] monoTy_lift_subst [(0, TyConst("->", [TyConst("bool", []); TyVar 2]))] (TyConst("->", [TyVar 1; TyVar 5])) (student solution timed out / exception thrown)
+[0 / 1] monoTy_lift_subst [(1, TyConst("->", [TyConst("bool", []); TyConst("*", [TyVar 2; TyVar 1])])); (2, TyConst("triple", [TyVar 1; TyVar 0; TyConst("bool",[])]))] (TyConst( "quintuple", [TyVar 0; TyVar 1; TyConst("bool", []); TyVar 2; TyConst("list",[TyVar 2])])) (student solution timed out / exception thrown)
+[0 / 1] occurs 0 TyVar 0 (student solution timed out / exception thrown)
+[0 / 1] occurs 0 TyVar 3 (student solution timed out / exception thrown)
+[0 / 1] occurs 0 TyConst("bool", []) (student solution timed out / exception thrown)
+[0 / 1] occurs 0 TyConst("triple", [TyVar 0; TyVar 0; TyVar 1]) (student solution timed out / exception thrown)
+[0 / 1] occurs 0 TyConst("->", [TyVar 1; TyConst("->", [TyVar 2; TyConst("bool", [])])]) (student solution timed out / exception thrown)
+[0 / 1] unify [] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 3, TyVar 3)] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyConst("string", []), TyConst("string", [])); (TyVar 3, TyVar 3)] (student solution timed out / exception thrown)
+[0 / 1] unify [((TyConst("int", [])), TyVar 3)] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyConst("->", [TyConst("int", []); TyVar 2]), TyVar 3)] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyConst("string", [TyVar 3; TyVar 4]), TyConst("string", [TyVar 1; TyVar 2]))] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyConst("->", [TyConst("*", [TyVar 1; TyVar 3]); TyConst("list", [TyVar 2])]), TyConst("->", [TyConst("*", [TyVar 3; TyVar 2]); TyConst("list", [TyVar 1])]))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyConst("string", []), TyConst("string", []))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyConst("->", [TyVar 1; TyVar 3]), TyConst("->", [TyVar 2; TyVar 3]))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyConst("->", [TyConst("int", []); TyConst("bool", [])]), TyConst("->", [TyConst("int", []); TyConst("bool", [])]))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 0, TyConst("int" , []))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 0, TyVar 1)] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 0, TyConst("int" , [])); (TyVar 1, TyConst("list", []))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 0, TyVar 1); (TyVar 2, TyVar 1)] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 1, TyConst("int" , [TyVar 5; TyConst("option", [TyVar 6])])); (TyVar 2, TyConst( "int", [TyVar 6; TyVar 7])); (TyVar 3, TyConst("list", [TyVar 7])); (TyVar 4, TyConst("int" , []))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 0, TyVar 1); (TyVar 2, TyVar 0)] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 0, TyVar 1); (TyConst("int" , []), TyVar 0)] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyVar 4, TyConst("int", [])); (TyVar 3, TyConst("list", [TyVar 4])); (TyVar 2, TyConst( "int" , [TyVar 3; TyVar 4])); (TyVar 1, TyConst( "int" , [TyVar 2; TyConst("option", [TyVar 3])]))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 2, TyVar 0); (TyVar 0, TyVar 1)] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyConst("int" , []), TyVar 0); (TyVar 0, TyVar 1)] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyVar 1, TyConst("int" , [TyVar 2; TyConst("option", [TyVar 3])])); (TyVar 2, TyConst("int" , [TyVar 3; TyVar 4])); (TyVar 3, TyConst("list", [TyVar 4])); (TyVar 4, TyConst("int" , []))] (student solution timed out / exception thrown)
+[0 / 3] unify [(TyVar 1, TyConst( "int", [(TyConst("int", [])); TyConst("option", [TyVar 4]); TyVar 6])); (TyVar 2, TyConst("int", [TyVar 7; TyVar 1; TyVar 4])); (TyVar 3, TyConst("list", [TyVar 1; TyConst("->", [TyVar 2; (TyConst("int", []))])])); (TyVar 4, TyConst("->", [(TyConst("int", [])); (TyConst("bool", []))]))] (student solution timed out / exception thrown)
+[0 / 3] unify [(TyVar 1, TyVar 2); (TyVar 2, TyVar 3); (TyVar 3, TyConst("int", [])); (TyVar 3, TyVar 1)] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyConst("int", [TyVar 1; TyVar 2]), TyConst("int", [TyConst("bool", []); TyConst( "int", [])]))] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyVar 0, TyConst("list", [TyConst ("int", [])])); (TyConst ("->", [TyVar 0; TyVar 0]), TyConst ("->", [TyVar 0; TyVar 1]))] (student solution timed out / exception thrown)
+[0 / 3] unify [(TyConst("int", [TyConst("string", [TyVar 3]); TyConst( "option", [TyConst("int", [TyConst("string", [TyVar 4]); TyVar 1; TyConst("string", [ TyConst("*", [TyVar 3; TyVar 4])])])])]), TyConst("int", [TyVar 1; TyConst("option", [TyVar 2])])); (TyConst("string", [TyVar 3]), TyConst("string", [TyConst("bool", [])])); (TyConst("*", [TyConst("bool", []); TyVar 1]), TyVar 4) ] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyConst("list", [TyVar 1]), TyConst("list", [TyConst("->", [TyVar 2; TyVar 3])])); (TyVar 1, TyConst("->", [TyVar 2; TyVar 3]))] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyVar 1, TyConst("->", [TyVar 2; TyVar 3])); (TyConst("list", [TyVar 1]), TyConst("list", [TyConst("->", [TyVar 2; TyVar 3])]))] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyConst("option", [TyConst("->", [TyVar 2; TyVar 3])]), TyConst("option", [TyVar 1])); (TyConst("list", [TyVar 1]), TyConst("list", [TyConst("->", [TyConst("int", []); TyVar 2])])); (TyVar 1, TyConst("->", [TyVar 3; TyVar 2])) ] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyVar 3, TyVar 3); (TyConst("int", []), TyConst("bool", []))] (student solution timed out / exception thrown)
+[0 / 2] unify [((TyConst("int", [])), TyVar 3); (TyConst("int", []), TyConst("bool", []))] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyConst("int", []), TyConst("bool", []))] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyConst("option", [TyConst("int", [])]), TyConst("option", [TyConst("int", []); TyConst("bool", [])]))] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyConst("option", [TyConst("int", [])]), TyConst("option", [TyConst("bool", [])]))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyConst("->", [TyVar 1]), TyConst("->", [TyVar 2])); (TyConst("int", []), TyConst("bool", []))] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyVar 1, TyConst("string", [TyVar 0; TyVar 1]))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 0, TyConst("int" , [])); (TyConst("int", []), TyConst("bool", []))] (student solution timed out / exception thrown)
+[0 / 3] unify [(TyVar 0, TyConst("int" , [])); (TyVar 0, TyConst("bool", []))] (student solution timed out / exception thrown)
+[0 / 1] unify [(TyVar 1, TyConst("->", [TyVar 1; TyConst("option", [TyVar 2])])); (TyConst("list", [TyVar 2]), TyVar 1)] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyConst("option", [TyConst("->", [TyVar 2; TyVar 3])]), TyConst("option", [TyVar 1])); (TyConst("list", [TyVar 1]), TyConst("list", [TyConst("->", [TyConst("int", []); TyVar 2])])); (TyVar 1, TyConst("->", [TyVar 3; TyVar 2])); (TyConst("int", []), TyConst("bool", [])) ] (student solution timed out / exception thrown)
+[0 / 2] unify [(TyConst("option", [TyConst("->", [TyVar 2; TyVar 3])]), TyConst("option", [TyVar 1])); (TyConst("list", [TyVar 1]), TyConst("list", [TyConst("->", [TyConst("int", []); TyVar 2])])); (TyVar 1, TyConst("->", [TyConst("bool", []); TyVar 2])) ] (student solution timed out / exception thrown)
+
+[0 / 1] equiv_types (TyVar 0) (TyVar 4) (student solution timed out / exception thrown)
+[0 / 1] equiv_types (TyConst("int",[])) (TyConst("bool", [])) (student solution timed out / exception thrown)
+[0 / 1] equiv_types (TyConst("->", [TyVar 4; TyConst("->", [TyVar 3; TyVar 4])])) (TyConst("->", [TyVar 3; TyConst("->", [TyVar 4; TyVar 3])])) (student solution timed out / exception thrown)
+[0 / 1] equiv_types (TyConst("list",[TyVar 3; TyVar 1])) (TyConst("option",[TyVar 3; TyVar 1])) (student solution timed out / exception thrown)
+[0 / 1] equiv_types (TyConst("->", [TyVar 4; TyConst("->", [TyVar 3; TyVar 4])])) (TyConst("->", [TyVar 4; TyConst("->", [TyVar 3; TyVar 2])])) (student solution timed out / exception thrown)
+[0 / 1] equiv_types (TyConst("->", [TyVar 4; TyConst("->", [TyVar 3; TyVar 2])])) (TyConst("->", [TyVar 4; TyConst("->", [TyVar 3; TyVar 4])])) (student solution timed out / exception thrown)
+[0 / 1] equiv_types (TyConst("->", [TyVar 4; TyConst("->", [TyVar 3; TyVar 4])])) (TyConst("->", [TyVar 3; TyVar 2])) (student solution timed out / exception thrown)
+[0 / 1] equiv_types (TyConst("->", [TyVar 3; TyVar 2])) (TyConst("->", [TyVar 4; TyConst("->", [TyVar 3; TyVar 4])])) (student solution timed out / exception thrown)
+[0 / 1] equiv_types (TyConst("list",[TyVar 3; TyVar 1])) (TyConst("list",[TyVar 1; TyVar 3])) (student solution timed out / exception thrown)
+[0 / 1] equiv_types (TyConst("list",[TyVar 1; TyVar 3])) (TyConst("list",[TyVar 3; TyVar 1])) (student solution timed out / exception thrown)
+Total: [0 / 77]
+Extra: [0 / 10]
+
+Additional outout from compiling students code (may be empty)
+----------------------------------------------------
+
+
+
+Student's code (with comments and point adjustments)
+----------------------------------------------------
+
+
+(*
+ * File: mp7-skeleton.ml
+ *)
+
+open Mp7common
+
+(* Problem 1*)
+let asMonoTy1 () = failwith "Not implemented"
+let asMonoTy2 () = failwith "Not implemented"
+let asMonoTy3 () = failwith "Not implemented"
+let asMonoTy4 () = failwith "Not implemented"
+
+(* Problem 2*)
+let rec subst_fun subst m = failwith "Not implemented"
+
+(* Problem 3*)
+let rec monoTy_lift_subst subst monoTy = failwith "Not implemented"
+
+(* Problem 4*)
+let rec occurs x ty = failwith "Not implemented"
+
+(* Problem 5*)
+let rec unify eqlst = failwith "Not implemented"
+
+(* Extra Credit *)
+let equiv_types ty1 ty2 = failwith "Not implemented"
+
+Stdout
+----------------------------------------------------
+
+

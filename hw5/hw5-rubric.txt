@@ -1,0 +1,8 @@
+(* 1 *)
+Each point in designing the datatype is worthy two credits. For example, if someone did not put down the true and false value as two constants (i.e. wrote something like Bool bool insted of True / False), they will lose four points.
+
+(* 2 *)
+If someone wrote a wrong type function or a function cannot be parsed, I will take five points off. (for example, if someone designs their datatype as: type bool_exp = Val of string | true | false | Not of bool_exp | And of bool_exp * bool_exp | Or of bool_exp * bool_exp, where the true and false value now have type bool_exp, they will never be able to write a correct function with a correct type)
+
+(* 3 *)
+If someone had a syntax error in designing their datatype (obvious one only), 10 points off. For example, if someone had a typo in their datatype like the neg in "type bool_exp = Val of string | True | False | neg of bool_exp | And of bool_exp * bool_exp | Or of bool_exp * bool_exp", it is ok. However, if they wrote their type as:  "type bool_exp = val of string | ta | fa | neg of bool_exp | and of bool_exp * bool_exp | or of bool_exp * bool_exp", it is not acceptable since they might not know how to write a Ocaml datatype.

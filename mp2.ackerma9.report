@@ -1,0 +1,135 @@
+
+mp2 grade report for ackerma9
+================================
+
+Latest handin (graded copy) was - on_time
+
+*Regular Problems:
+Grading script score  => [28 / 34]
+Late Penalty          => 0
+Point adjustments     => 0
+Total                 => 28
+
+*Extra Credit:
+Grading script score for extra credit => [0 / 5]
+Late Penalty for extra credit         => 0
+Point adjustments for extra credit    => 0
+Total extra credit                    => 0
+
+
+mp2grader program output
+---------------------
+
+
+[1 / 1] dist (1.0, 2.5) (4.0, 6.5) (correct)
+[1 / 1] dist (-1.0,1.0) (-6.0, 13.0) (correct)
+[1 / 1] fibo_num 0 (correct)
+[1 / 1] fibo_num 20 (correct)
+[1 / 1] fibo_sum 0 (correct)
+[0 / 0] fibo_sum 8 (correct)
+[1 / 1] fibo_sum 20 (correct)
+[1 / 1] reverse_triple_to_list ("class","cs421","hello") (correct)
+[1 / 1] reverse_triple_to_list (1,4,9) (correct)
+[1 / 1] sum [-1;2;-4;8;4;0;1] (correct)
+[1 / 1] sum [] (correct)
+[0 / 1] min [4.;2.;1.] 0.0 (student solution timed out / exception thrown)
+[0 / 1] min [10;8;6;9;7;] 0 (student solution timed out / exception thrown)
+[0 / 1] min ["a"] "null" (student solution timed out / exception thrown)
+[0 / 1] min [] () (student solution timed out / exception thrown)
+[1 / 1] is_sorted_ascend ['e';'d';'c';'b'] (correct)
+[0 / 0] is_sorted_ascend [1;1] (student solution returns an incorrect value)
+[1 / 1] is_sorted_ascend [-3;-2;-1;1;0] (correct)
+[0 / 1] is_sorted_ascend [-1;0;1;1] (student solution returns an incorrect value)
+[1 / 1] is_sorted_ascend [] (correct)
+[1 / 1] zip [1;2;3;4] [-1;-2;-3;-4;-5;-6] (correct)
+[1 / 1] zip ['a';'b';'c';'d'] [1.;2.;3.] (correct)
+[1 / 1] zip [();()] [1;2] (correct)
+[1 / 1] zip [] [] (correct)
+[1 / 1] unzip [(1,2);(3,4)] (correct)
+[1 / 1] unzip [('a',1)] (correct)
+[1 / 1] unzip [(1,0.);(3,2.);(5,4.)] (correct)
+[1 / 1] unzip [] (correct)
+[1 / 1] add_odd_pos [1;2;3;4;5] (correct)
+[1 / 1] add_odd_pos [1;2;3;4;5;6] (correct)
+[1 / 1] add_odd_pos [] (correct)
+[1 / 1] add_odd_pos [124] (correct)
+[0 / 0] add_odd_pos [124;421] (correct)
+[1 / 1] insert 400 [] (correct)
+[0 / 0] insert 'c' ['a';'b';'d'] (correct)
+[1 / 1] insert 'd' ['a';'b';'c'] (correct)
+[1 / 1] insert 0 [1;2;3] (correct)
+[0 / 0] insert 10.0 [1.0;5.0;8.0;10.5;11.0] (correct)
+[0 / 1] insert 3 [0;3;3;2;4;5] (student solution returns an incorrect value)
+
+[0 / 1] primes (-2) (student solution timed out / exception thrown)
+[0 / 1] primes 0 (student solution timed out / exception thrown)
+[0 / 1] primes 1 (student solution timed out / exception thrown)
+[0 / 1] primes 5 (student solution timed out / exception thrown)
+[0 / 1] primes 15 (student solution timed out / exception thrown)
+Total: [28 / 34]
+Extra: [0 / 5]
+
+Additional outout from compiling students code (may be empty)
+----------------------------------------------------
+
+
+
+Student's code (with comments and point adjustments)
+----------------------------------------------------
+
+
+(* CS421 - Spring 2014
+ * MP2 
+ *
+ * Please keep in mind that there may be more than one
+ * way to solve a problem.  You will want to change how a number of these start.
+ *)
+
+
+(*Problem 1*)
+let dist (x1, y1) (x2, y2) = sqrt((x2-.x1)**2.0 +. (y2-.y1)**2.0);;
+
+(*Problem 2*)
+let rec fibo_num n = match n with 0->0|1->1|x->fibo_num(x-1)+fibo_num(x-2);;
+
+(*Problem 3*)
+let rec fibo_sum n = match n with 0->0|1->1|x->fibo_num(x)+fibo_sum(x-1);;
+
+(*Problem 4*)
+let reverse_triple_to_list (a, b, c) = (c::b::a::[]);;
+
+(*Problem 5*)
+let rec sum l = match l with []->0|(x::xs)->x+sum(xs);;
+
+(*Problem 6*)
+(*** This function must work for all types. This prevented the grader from working so it was commented out ***)
+
+let rec min l default  = raise(Failure "");; (***match l with []->default|(x::xs)-> if default == 0 then min xs x else if x < default then min xs x else min xs default;;***)
+
+(*Problem 7*)
+let rec is_sorted_ascend l = match l with []->true|(x::[])->true|(x1::x2::xs)->if(x1<x2) then is_sorted_ascend (x2::xs) else false;;
+
+(*Problem 8*)
+let rec zip l1 l2 = match l1 with [] -> [] | (x1::x1s) -> match l2 with [] -> [] | (x2::x2s) -> [(x1,x2)]@zip x1s x2s;;
+
+let rec fold_right f a list = match list with | [] -> a | x::xs -> f x (fold_right f a xs);;
+
+(*Problem 9*)
+let rec unzip l = fold_right (fun (x,y) (xlst, ylst)->(x::xlst,y::ylst)) ([],[]) l;;
+
+let rec sum_odd i lst = match lst with [] -> 0 | x::xs -> if i == 1 then x + sum_odd 0 xs else sum_odd 1 xs;;
+
+(*Problem 10*)
+let rec add_odd_pos l = sum_odd 1 l;;
+
+(*Problem 11*)
+let rec insert n l = match l with [] -> [n] | x::xs -> if n > x then x::insert n xs else n::l;;
+
+
+(*Problem 12*)
+let rec primes n = raise(Failure "Function not implemented yet.")
+
+Stdout
+----------------------------------------------------
+
+

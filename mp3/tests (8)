@@ -1,0 +1,62 @@
+(**************************************************************************
+ * You can add new test cases by adding new elements to the following lists
+ * Format is:
+ * TEST<X>ARG(<weight>, <function_name>, <arg1>, <arg2>, ..., <argX>)
+ *
+ * <X> is the number of argument that the function being tested takes.
+ **************************************************************************)
+
+let remove_if_stu l f = List.fold_right (Student.remove_if_rec f) l Student.remove_if_base
+let remove_if_sol l f = List.fold_right (Solution.remove_if_rec f) l Solution.remove_if_base
+
+let split_sum_stu l f = List.fold_right (Student.split_sum_rec f) l Student.split_sum_base
+let split_sum_sol l f = List.fold_right (Solution.split_sum_rec f) l Solution.split_sum_base
+
+let all_positive_stu l = List.fold_left Student.all_positive_rec Student.all_positive_base l
+let all_positive_sol l = List.fold_left Solution.all_positive_rec Solution.all_positive_base l
+
+let range_count_stu l m n = List.fold_left (Student.range_count_rec m n) Student.range_count_base l
+let range_count_sol l m n = List.fold_left (Solution.range_count_rec m n) Solution.range_count_base l
+
+let idk = fun x -> x
+let uk = fun x -> ()
+
+(* This list is for regular problems *)
+let rubric =
+[
+	TEST1ARG(1, even_count, [1;2;3]);
+
+	TEST2ARG(1, split_sum, [1;2;3], (fun x -> (x mod 2 = 1)));
+
+	TEST2ARG(1, merge, [1;3;5], [2;4]);
+	TEST2ARG(0, merge, [()], [()]);
+
+	TEST3ARG(1, range_count, [0;1;2;3], 1, 3);
+	TEST3ARG(1, range_count, ['a';'b';'c'], 'b', 'c');
+
+	TEST1ARG(1, max_index, [1;2;1]);
+	TEST1ARG(0, max_index, [1.;2.;3.]);
+
+	TEST1ARG(1, unique_to_neighbor, [1;2;2;3;2]);
+	TEST1ARG(0, unique_to_neighbor, [()]);
+	
+	TEST2ARG_TWOFUN(1, remove_if_sol, remove_if_stu, [1;2;3], (fun x -> x=2));
+	TEST2ARG_TWOFUN(1, remove_if_sol, remove_if_stu, [true;true;false], idk);
+
+	TEST2ARG_TWOFUN(1, split_sum_sol, split_sum_stu, [1;2;3], (fun x -> (x mod 2 = 1)));
+
+	TEST1ARG_TWOFUN(1, all_positive_sol, all_positive_stu, [1;2]);
+
+	TEST3ARG_TWOFUN(1, range_count_sol, range_count_stu, [0;1;2;3], 1, 3);
+	TEST3ARG_TWOFUN(1, range_count_sol, range_count_stu, ['a';'b';'c'], 'b', 'd');
+
+	TEST3ARG(1, app_all_with, [(fun x y -> x*y); (fun x y -> x+y)], 10, [-1;0;1])
+]
+(* Note: the last entry should not be followed by a semicolon. *)
+
+(* This list is for extra credit problems *)
+let extra_rubric = [
+	TEST1ARG(1, rle, [1;1;2;2;3;3]);
+	TEST1ARG(1, rle, [();()])
+]
+

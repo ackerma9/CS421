@@ -1,0 +1,160 @@
+
+mp8 grade report for ackerma9
+================================
+
+Latest handin (graded copy) was - on_time
+
+*Regular Problems:
+Grading script score  => [5 / 73]
+Late Penalty          => 0
+Point adjustments     => 0
+Total                 => 5
+
+*Extra Credit:
+Grading script score for extra credit => [0 / 7]
+Late Penalty for extra credit         => 0
+Point adjustments for extra credit    => 0
+Total extra credit                    => 0
+
+
+mp8grader program output
+---------------------
+
+
+[0 / 1] get_all_tokens "let = in + , ; ( - )" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "if else then orelse andalso" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "~ - + * / +. -. *. /." (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "< > <= >= = <> and" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "end local fn with fun op mod" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "rec  nil not val raise  handle" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "[ ] , _ :: @  => | ^" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "42 100.5 0" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "123 453" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "12.34 5.67" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens " 0.0002" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "123+123" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "000 00.00" (student solution timed out / exception thrown)
+[1 / 1] fail_get_all_tokens ".053" (correct)
+[1 / 1] fail_get_all_tokens "530." (correct)
+[0 / 2] get_all_tokens "true false ()" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "(,)" (student solution timed out / exception thrown)
+[0 / 2] get_all_tokens "truefalse (()" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "()()))(()())()" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "this is where if" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "n_______'" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "Salam" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "i'm identifying_you" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "salamthen elsebeGOOD" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "s12345 S12345" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "ifthen truefalse letrec funin" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "12345s" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "_alam" (student solution timed out / exception thrown)
+[1 / 1] fail_get_all_tokens "'alam" (correct)
+[0 / 1] get_all_tokens "this (* is a *) test" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "this ;; is a test" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "this ;; is a\n test" (student solution timed out / exception thrown)
+[0 / 1] try_get_all_tokens "this (* is (* a test *)" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens ";;;;;" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "(********************)" (student solution timed out / exception thrown)
+[0 / 2] get_all_tokens "(**)* )" (student solution timed out / exception thrown)
+[0 / 2] get_all_tokens ";;(* (*TEst*) \n let" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "(*  \n let \n come \n have \n  *)" (student solution timed out / exception thrown)
+[0 / 2] get_all_tokens "(*  \\ let come \n have \n \\ *)" (student solution timed out / exception thrown)
+[0 / 2] try_get_all_tokens "(* is ;; a test *)" (student solution timed out / exception thrown)
+[0 / 2] try_get_all_tokens ";; is (* /n a test *)" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "\"some string\"" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "\" she said, \\\"hello\\\"\"" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "\"a line \\n starts here; indent \\t starts here next string\" \"starts here\"" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "\"Hello, \\n \\ world! \"" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "\" \\100 \\001 \"" (student solution timed out / exception thrown)
+[0 / 1] get_all_tokens "\" \\171 \\249 \"" (student solution timed out / exception thrown)
+[0 / 1] fail_get_all_tokens "\" \\281 \"" (student solution returns an incorrect value)
+[0 / 1] fail_get_all_tokens "\" \\999 \"" (student solution returns an incorrect value)
+[0 / 1] get_all_tokens "\" \\1039 \\2504503 \"" (student solution timed out / exception thrown)
+[2 / 2] fail_get_all_tokens "\"\"\"" (correct)
+[0 / 2] get_all_tokens " \"some\" , \"salam\" " (student solution timed out / exception thrown)
+[0 / 1] fail_get_all_tokens " \"\\6\" " (student solution returns an incorrect value)
+[0 / 1] fail_get_all_tokens " \"\\x26\" " (student solution returns an incorrect value)
+[0 / 2] get_all_tokens "\"1111111111111111111\"           " (student solution timed out / exception thrown)
+[0 / 2] get_all_tokens "\" (*Hello*)\" " (student solution timed out / exception thrown)
+[0 / 2] get_all_tokens "\" // \" " (student solution timed out / exception thrown)
+[0 / 2] get_all_tokens "\" if let\"  if let " (student solution timed out / exception thrown)
+[0 / 2] get_all_tokens "\"\"           " (student solution timed out / exception thrown)
+
+[0 / 1] try_comm_get_all_tokens "aaaa\n(*this is comment*)*)\n" (student solution timed out / exception thrown)
+[0 / 1] try_comm_get_all_tokens "aaaa\nbbbb\nc(*\n" (student solution timed out / exception thrown)
+[0 / 2] try_comm_get_all_tokens "let\n123\n\"hi\\n\"*)\n" (student solution timed out / exception thrown)
+[0 / 1] try_comm_get_all_tokens "//aaaa\nbbbb*)\n//c\n" (student solution timed out / exception thrown)
+[0 / 2] try_comm_get_all_tokens "hi\n // (*(*this is comment*)\nbut this is\n not*)*)\n" (student solution timed out / exception thrown)
+Total: [5 / 73]
+Extra: [0 / 7]
+
+Additional outout from compiling students code (may be empty)
+----------------------------------------------------
+
+
+
+Student's code (with comments and point adjustments)
+----------------------------------------------------
+
+
+{
+
+open Mp8common;;
+
+let line_count = ref 1
+let char_count = ref 1
+
+let cinc n = char_count := !char_count + n
+let linc n = line_count := (char_count := 1; !line_count + n)
+
+}
+
+(* You can assign names to commonly-used regular expressions in this part
+   of the code, to save the trouble of re-typing them each time they are used *)
+
+let numeric = ['0' - '9']
+let lowercase = ['a' - 'z']
+let letter =['a' - 'z' 'A' - 'Z' '_']
+
+rule token = parse
+  | [' ' '\t' '\n'] { token lexbuf }  (* skip over whitespace *)
+  | eof             { EOF } 
+
+(* your rules go here *)
+
+
+{(* do not modify this function: *)
+ let lextest s = token (Lexing.from_string s)
+
+let opcom r = OPCOM(r.line_num,r.char_num)
+let clcom r = CLCOM(r.line_num,r.char_num)
+let sclcom r = SCLCOM(r.line_num,r.char_num)
+
+  let get_all_tokens s =
+      let _ = char_count := 1 in
+      let _ = line_count := 1 in
+      let b = Lexing.from_string (s^"\n") in
+      let rec g () = 
+      match token b with EOF -> []
+      | t -> t :: g () in
+      g ()
+
+let try_get_all_tokens s =
+    try Some (get_all_tokens s) with Failure "unmatched comment" -> None
+    	     			      	 | OpenComm r -> None
+    	     			      	 | CloseComm r -> None
+    	     			      	 | SuperCloseComm r -> None
+let try_comm_get_all_tokens s =
+    try Some (get_all_tokens s) with Failure "unmatched comment" -> None
+    	     			      	 | OpenComm r -> Some ([opcom r])
+    	     			      	 | CloseComm r -> Some ([clcom r])
+    	     			      	 | SuperCloseComm r -> Some ([sclcom r])
+
+ }
+
+
+Stdout
+----------------------------------------------------
+
+

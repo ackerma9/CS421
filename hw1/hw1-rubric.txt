@@ -1,0 +1,21 @@
+rubric HW1:
+
+If anyone cannot put an empty environment in (* 1 *), they will lose one point.
+
+If anyone cannot correctly write the environment style, they will lose two point.
+
+If anyone cannot write the environment in (* 2 *) for variable x and a, they will lose one point.
+
+If anyone cannot find out the difference between a function closure and a value mapping in a environment in (* 3 *), they will be charged one point.
+
+If anyone cannot write correctly the value for x in (* 3 *), they will lose one point.
+
+If anyone do not know environment (* 4 *) is based on environment (* 2 *) instead of environment (* 3 *), they will lose one point.
+
+If anyone cannot correctly write out the tuples, they will lose one point.
+
+Grading for point (* 5 *) will be same as point (* 3 *), while point (* 6 *) will be the same as point (* 4 *).
+
+If anyone do not know how to deal with function closure, they will lose two points. Body for one point, environment for function closure will be worthy one point.
+
+Point (* 8 *) will be charged points based on students' knowledge of function application.

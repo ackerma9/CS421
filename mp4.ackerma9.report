@@ -1,0 +1,198 @@
+
+mp4 grade report for ackerma9
+================================
+
+Latest handin (graded copy) was - on_time
+
+*Regular Problems:
+Grading script score  => [47 / 49]
+Late Penalty          => 0
+Point adjustments     => -6
+Total                 => 41
+
+*Extra Credit:
+Grading script score for extra credit => [0 / 8]
+Late Penalty for extra credit         => 0
+Point adjustments for extra credit    => 0
+Total extra credit                    => 0
+
+
+mp4grader program output
+---------------------
+
+
+Result: 2
+Result: 2
+[1 / 1] addk 1 1 report (correct)
+[1 / 1] catk "hello " "world" (fun x -> x) (correct)
+Result: 1.
+Result: 1.
+[1 / 1] float_addk 1.0 1.0 (fun x -> Solution.float_divk x 2.0 (fun y -> (print_string "Result: ";print_float y; print_newline()))) (correct)
+Result: 1
+Result: 1
+[1 / 1] geqk 2 1 (fun b -> (report (if b then 1 else 0))) (correct)
+[0 / 0] addk 1 1 (fun x -> x) (correct)
+[1 / 1] subk 1 1 (fun x -> x) (correct)
+[1 / 1] mulk 1 1 (fun x -> x) (correct)
+[1 / 1] posk 1 (fun x -> x) (correct)
+[0 / 0] float_addk 1.0 1.0 (fun x -> x) (correct)
+[1 / 1] float_divk 1.0 1.0 (fun x -> x) (correct)
+[1 / 1] catk "a" "b" (fun x -> x) (correct)
+[1 / 1] consk 1 [] (fun x -> x) (correct)
+[0 / 0] consk 1.0 [] (fun x -> x) (correct)
+[0 / 0] geqk 1 1 (fun x -> x) (correct)
+[0 / 0] geqk 1.0 1.0 (fun x -> x) (correct)
+[1 / 1] eqk 1 1 (fun x -> x) (correct)
+[0 / 0] eqk 1.0 1.0 (fun x -> x) (correct)
+Result: 11
+Result: 11
+[1 / 1] poly 2 report (correct)
+[1 / 1] poly 2 (fun x -> x) (correct)
+[1 / 1] poly 2 (fun x -> ()) (correct)
+[1 / 1] poly -1 (fun x -> x) (correct)
+[1 / 1] poly 10 (fun x -> x) (correct)
+[1 / 1] composek Solution.inck Solution.inck 1 (fun x -> x) (correct)
+[1 / 1] composek Solution.inck Solution.inck 1 (fun x -> ()) (correct)
+[1 / 1] composek (fun x -> fun k -> k (x = 1)) (fun x -> fun k -> k (not x)) 1 (fun x -> x) (correct)
+[1 / 1] composek (fun x -> fun k -> k (x = 1)) (fun x -> fun k -> k (not x)) 1 (fun x -> ()) (correct)
+[1 / 1] composek (fun x -> fun k -> k ()) (fun x -> fun k -> k 0.0) () (fun x -> x) (correct)
+[0 / 0] composek (fun x -> fun k -> k ()) (fun x -> fun k -> k 0.0) () (fun x -> ()) (correct)
+[1 / 1] inverse_square_series 10 (correct)
+[0 / 1] inverse_square_series -1 (student solution timed out / exception thrown)
+[1 / 1] inverse_square_seriesk 10 (fun x -> x) (correct)
+[1 / 1] inverse_square_seriesk 10 (fun x -> ()) (correct)
+[0 / 1] inverse_square_seriesk -1 (fun x -> x) (student solution timed out / exception thrown)
+[1 / 1] inverse_square_seriesk 5 (fun x -> x) (correct)
+5432154321[1 / 1] rev_map (fun x -> print_int x; x + 1) [1;2;3;4;5] (correct)
+[1 / 1] rev_map (fun x -> ()) [true;false] (correct)
+5432154321[1 / 1] rev_mapk (fun x -> fun k -> Solution.print_intk x (fun t -> Solution.inck x k)) [1;2;3;4;5] (fun x -> x) (correct)
+5432154321[1 / 1] rev_mapk (fun x -> fun k -> Solution.print_intk x (fun t -> Solution.inck x k)) [1;2;3;4;5] (fun x -> ()) (correct)
+[1 / 1] rev_mapk (fun x -> fun k -> k ()) [true;false] (fun x -> x) (correct)
+[1 / 1] rev_mapk (fun x -> fun k -> k ()) [true;false] (fun x -> ()) (correct)
+1234512345[1 / 1] rev_mapk (fun x -> fun k -> Solution.print_intk x (fun t -> Solution.inck x k)) [5;4;3;2;1] (fun x -> x) (correct)
+[1 / 1] partition [1;2;3;4;5] (fun x -> x >= 3) (correct)
+[1 / 1] partition [true;false] (fun x -> not x) (correct)
+[1 / 1] partitionk [1;2;3;4;5] (fun x -> fun k -> Solution.geqk x 3 k) (fun x -> x) (correct)
+[1 / 1] partitionk [1;2;3;4;5] (fun x -> fun k -> Solution.geqk x 3 k) (fun x -> ()) (correct)
+[1 / 1] partitionk [true;false] (fun x -> fun k -> k (not x)) (fun x -> x) (correct)
+[1 / 1] partitionk [true;false] (fun x -> fun k -> k (not x)) (fun x -> ()) (correct)
+[1 / 1] partitionk [5;4;3;2;1] (fun x -> fun k -> Solution.geqk x 4 k) (fun x -> x) (correct)
+[1 / 1] findk [1;2;3;4;5] (fun x -> fun k -> Solution.eqk x 3 k) (fun x -> x) (fun x -> print_string "element not found"; -1) (correct)
+element not foundelement not found[1 / 1] findk [1;2;3;4;5] (fun x -> fun k -> Solution.eqk x 6 k) (fun x -> x) (fun x -> print_string "element not found"; -1) (correct)
+[1 / 1] findk [true;false] (fun x -> fun k -> k (not x)) (fun x -> ()) (fun x -> print_string "element not found"; x) (correct)
+element not foundelement not found[1 / 1] findk [true;true] (fun x -> fun k -> k (not x)) (fun x -> ()) (fun x -> print_string "element not found"; x) (correct)
+[1 / 1] findk [5;4;3;2;1] (fun x -> fun k -> Solution.geqk x 3 k) (fun x -> x) (fun x -> print_string "element not found"; -1) (correct)
+element not foundelement not found[1 / 1] findk [5;4;3;2;1] (fun x -> fun k -> Solution.geqk x 6 k) (fun x -> x) (fun x -> print_string "element not found"; -1) (correct)
+[1 / 1] findk [true;false] (fun x -> fun k -> k x) (fun x -> ()) (fun x -> print_string "element not found"; x) (correct)
+[1 / 1] findk [true;true] (fun x -> fun k -> k x) (fun x -> ()) (fun x -> print_string "element not found"; x) (correct)
+
+[0 / 1] appk [Solution.inck;Solution.inck;Solution.inck] 0 (fun x -> x) (student solution timed out / exception thrown)
+[0 / 1] appk [Solution.inck;Solution.inck;Solution.inck] 10 (fun x -> x) (student solution timed out / exception thrown)
+[0 / 1] appk [Solution.notk;Solution.notk;Solution.notk] false (fun x -> x) (student solution timed out / exception thrown)
+[0 / 1] appk [Solution.notk;Solution.notk;Solution.notk] true (fun x -> x) (student solution timed out / exception thrown)
+[0 / 1] appk [Solution.inck;(fun x -> fun k -> k (x * x))] 1 (fun x -> x + 1) (student solution timed out / exception thrown)
+[0 / 1] appk [Solution.inck;(fun x -> fun k -> k (x * x))] -1 (fun x -> x + 1) (student solution timed out / exception thrown)
+[0 / 1] appk [(fun x -> fun k -> k (x *. x));(fun x -> fun k -> k (x *. x));(fun x -> fun k -> k (x *. x))] 1.1 (fun x -> x +. 1.) (student solution timed out / exception thrown)
+[0 / 1] appk [(fun x -> fun k -> k (x *. x));(fun x -> fun k -> k (x *. x));(fun x -> fun k -> k (x *. x))] -1.1 (fun x -> x +. 1.) (student solution timed out / exception thrown)
+Total: [47 / 49]
+Extra: [0 / 8]
+
+Additional outout from compiling students code (may be empty)
+----------------------------------------------------
+
+
+
+Student's code (with comments and point adjustments)
+----------------------------------------------------
+
+
+open Mp4common
+
+let report x =
+print_string "Result: ";
+print_int x;
+print_newline();;      
+
+(* Problem 1 *)
+let addk n m k = k(n+m);;
+ 
+let subk n m k = k(n-m);;
+  
+let mulk n m k = k(n*m);;
+  
+let posk x k = k(x>0);;
+  
+let float_addk a b k = k(a+.b);;
+  
+let float_divk a b k = k(a/.b);;
+  
+let catk str1 str2 k = k(str1^str2);;
+ 
+let consk e l k = k([e]@l);;
+  
+let eqk x y k = k(x=y);;
+  
+let geqk x y k = k(x>=y);;
+
+(* Problem 2 *)
+let poly x k = mulk x x (fun xsquare -> mulk xsquare x (fun xcube -> addk xcube x (fun xcubeplusx -> addk xcubeplusx 1 k)));;
+(*** Must first compute x^3, then x+1, then add them together ***) (*** -2 Points ***)
+
+(* Problem 3 *)
+let composek f g x k = f x (fun x2 -> g x2 k);;
+
+(* Problem 4 *)
+let rec inverse_square_series n = match n with 0 -> 0.
+| x -> float_addk (mulk x x (fun xsquare -> float_divk (float 1) (float xsquare) (fun b -> b))) (inverse_square_series (subk n 1 (fun a -> a))) (fun c -> c);;
+(*** This is not direct style ***) (*** -1 Point ***)
+  
+let rec inverse_square_seriesk n k = eqk n 0 (fun b -> if b then k 0.
+else subk n 1 
+(fun s -> inverse_square_seriesk s 
+(fun q -> float_addk q
+(mulk n n 
+(fun ssquare -> float_divk (float 1) (float ssquare) 
+(fun c -> c)))k)));;
+
+(*** Each function should pass its result to the next step using the continuation (fun x -> x is not CPS) ***) (*** -2 Points ***)
+
+
+(* Problem 5 *)
+let rec rev_map f l = match l with [] -> [] | (h::t) -> consk (f(h)) (rev_map f t) (fun a -> a);;
+(*** This is not direct style ***) (*** -1 point ***)
+
+let rec rev_mapk f l k = match l with [] -> k [] 
+|(h::t) -> rev_mapk f t 
+(fun s -> f h (fun fh -> consk fh s k));;
+
+
+(* Problem 6 *)
+let rec partition l p = match l with [] -> ([],[]) | (h::t) -> (let (a,b) = partition t p in if(p h) then ([h]@a,b) else (a,[h]@b));;
+  
+let rec partitionk l p k =  match l with [] -> k ([],[]) 
+| (h::t) -> p h 
+(fun fh -> partitionk t p 
+(fun s -> match s with (x,y) -> if (fh) 
+then consk h x (fun ex -> k (ex,y))
+else consk h y (fun ey -> k (x,ey))));;
+
+(* Problem 7 *)
+let rec findk l p normalk exceptionk = match l with [] -> exceptionk () | (h::t) -> p h (fun b -> if b then normalk h else findk t p normalk exceptionk);;
+
+(* Problem 8 *)
+let rec appk l x k =
+  raise(Failure "Function not implemented yet.")
+
+
+Stdout
+----------------------------------------------------
+
+Result: 2
+Result: 2
+Result: 1.
+Result: 1.
+Result: 1
+Result: 1
+Result: 11
+Result: 11
+

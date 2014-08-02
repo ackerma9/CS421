@@ -1,0 +1,64 @@
+Welcome to the CS421 grading program. 
+
+The files you need to edit in this bundle are:
+- mpX.ml
+- tests (add new test cases)
+No other file should be edited. You will only commpit mpX.ml.
+
+To run the grading program:
+
+(In these items, mpX refers to mp1, mp2, mp3, etc)
+
+0.  IMPORTANT: Make sure your solution defines every function we ask you
+    to define. For example, suppose we ask you to define the function
+	
+        splat : 'a list -> 'a list list
+		
+    but for whatever reason, you decide you don't want to write the splat
+    function. Then please define the splat function as follows:
+	
+        let splat lst = raise (Failure(""))
+		
+    If you forget to define a function, the grading program will not compile;
+    you won't receive any credit if the grading program does not compile. 
+
+    For your convenience, mpX.ml includes definitions for all the functions,
+    and is compilable.
+
+1.  Put your solution in mpX.ml, in this directory.
+
+2.  Execute
+	
+        make
+		
+    to build the grader.  
+    
+    If the grader does not build, make sure you have your solution named
+    mpX.ml.
+	
+    Secondly, the grading program won't build if your solution's functions
+    do not have the correct types, or if a function is not defined (see #0).
+
+    WARNING: Makefile copies your mpX.ml as student.ml, and then compiles it. 
+    Do not have any important file named student.ml, or else it will be 
+    overwritten and you will lose it.
+
+3.  Run
+		
+        ./grader
+		
+    to see how well your solution does.
+
+4.  If you make changes to your solution, be sure to re-run make (step #2).
+    If you forget to re-run make, your changes won't have any effect on the
+    grader program. Do not forget that your solution will be graded using 
+    many more test cases than provided to you. You are encouraged to test your
+    solution against more cases.
+
+5.  The rubric provided is not extensive. You should add many more test cases 
+    to increase your confidence that your implementation is correct. The grading
+    rubric will include many more tests than the one provided to you.
+
+    IMPORTANT: Add new test cases to the "tests" file to increase your confidence
+    about your implementation.
+

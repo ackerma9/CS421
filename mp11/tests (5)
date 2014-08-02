@@ -1,0 +1,63 @@
+open Mp11common
+let rubric_version = "1.0"
+let rubric_title = "CS421 Spring 2014 MP11"
+
+(**************************************************************************
+ * You can add new test cases by adding new elements to the following lists
+ * Format is:
+ * TEST<X>ARG(<weight>, <function_name>, <arg1>, <arg2>, ..., <argX>)
+ *
+ * <X> is the number of argument that the function being tested takes.
+ **************************************************************************)
+
+let parse s = Micromlparse.main Micromllex.token (Lexing.from_string s)
+
+let rubric = [
+TEST3ARG(1, app_cont_to_value, [], External, (IntVal 6));
+
+TEST2ARG(1, one_step_exp_cps_eval, [], (ConstCPS(External, IntConst 2)));
+
+TEST2ARG(1, one_step_exp_cps_eval, [ValueBinding("x", IntVal 2)],
+ (VarCPS(External, "x")));
+
+TEST2ARG(1, one_step_exp_cps_eval, [ValueBinding("x", IntVal 2)],
+ (MonOpAppCPS(External, IntNegOp, "x", EmptyExnContCPS)));
+
+TEST2ARG(1, one_step_exp_cps_eval,
+ [ValueBinding("b", IntVal 3);ValueBinding("a", IntVal 2)],
+ (BinOpAppCPS(External, IntPlusOp, "a", "b", EmptyExnContCPS)));
+
+TEST2ARG(1, one_step_exp_cps_eval, [ValueBinding("a", BoolVal true)],
+ (IfCPS("a", ConstCPS(External,IntConst 1), ConstCPS(External,IntConst 0))));
+
+TEST2ARG(1, one_step_exp_cps_eval, [], (FnCPS (External, "x", 1, 0,
+   VarCPS
+    (ContCPS ("a",
+      ConstCPS
+       (ContCPS ("b",
+         BinOpAppCPS (ContVarCPS 1, IntPlusOp, "a", "b", ExnContVarCPS 0)),
+       IntConst 5)),
+    "x"))));
+
+TEST2ARG(1, one_step_exp_cps_eval, [],
+  (cps_dec (parse "val rec f n = if n = 0 then 1 else f (n - 1);")
+   (VarCPS(External, "f"))
+  EmptyExnContCPS));
+
+TEST2ARG(1, one_step_exp_cps_eval,
+ [ValueBinding("plus5", (CPSClosureVal ("x", 1, 0,
+  VarCPS
+   (ContCPS ("a",
+     ConstCPS
+      (ContCPS ("b",
+        BinOpAppCPS (ContVarCPS 1, IntPlusOp, "a", "b", ExnContVarCPS 0)),
+      IntConst 5)),
+   "x"),
+   [])));
+  ValueBinding("c",IntVal 2)],
+ (AppCPS(External, "plus5", "c", EmptyExnContCPS)))
+]
+
+(* This list is for extra credit problems *)
+
+let extra_rubric = []

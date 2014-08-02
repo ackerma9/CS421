@@ -1,0 +1,87 @@
+(**************************************************************************
+ * You can add new test cases by adding new elements to the following lists
+ * Format is:
+ * TEST<X>ARG(<weight>, <function_name>, <arg1>, <arg2>, ..., <argX>)
+ *
+ * <X> is the number of argument that the function being tested takes.
+ **************************************************************************)
+open Mp4common
+
+(* This list is for regular problems *)
+let rubric =
+[
+  TEST3ARG(1, addk, 1, 1, report);
+  TEST3ARG(1, catk, "hello ", "world", (fun x -> x));
+  TEST3ARG(1, float_addk, 1.0, 1.0,
+      (fun x -> Solution.float_divk x 2.0
+        (fun y -> (print_string "Result: ";print_float y; print_newline()))));
+  TEST3ARG(1, geqk, 2, 1, (fun b -> (report (if b then 1 else 0))));
+
+  TEST3ARG(0, addk, 1, 1, (fun x -> x));
+  TEST3ARG(0, subk, 1, 1, (fun x -> x));
+  TEST3ARG(0, mulk, 1, 1, (fun x -> x));
+  TEST2ARG(0, posk, 1, (fun x -> x));
+  TEST3ARG(0, float_addk, 1.0, 1.0, (fun x -> x));
+  TEST3ARG(0, float_divk, 1.0, 1.0, (fun x -> x));
+  TEST3ARG(0, catk, "a", "b", (fun x -> x));
+  TEST3ARG(0, consk, 1, [], (fun x -> x));
+  TEST3ARG(0, consk, 1.0, [], (fun x -> x));
+  TEST3ARG(0, geqk, 1, 1, (fun x -> x));
+  TEST3ARG(0, geqk, 1.0, 1.0, (fun x -> x));
+  TEST3ARG(0, eqk, 1, 1, (fun x -> x));
+  TEST3ARG(0, eqk, 1.0, 1.0, (fun x -> x));
+  TEST3ARG(0, addk, 1, 1, (fun x -> ()));
+  TEST3ARG(0, subk, 1, 1, (fun x -> ()));
+  TEST3ARG(0, mulk, 1, 1, (fun x -> ()));
+  TEST2ARG(0, posk, 1, (fun x -> ()));
+  TEST3ARG(0, float_addk, 1.0, 1.0, (fun x -> ()));
+  TEST3ARG(0, float_divk, 1.0, 1.0, (fun x -> ()));
+  TEST3ARG(0, catk, "a", "b", (fun x -> ()));
+  TEST3ARG(0, consk, 1, [], (fun x -> ()));
+  TEST3ARG(0, consk, 1.0, [], (fun x -> ()));
+  TEST3ARG(0, geqk, 1, 1, (fun x -> ()));
+  TEST3ARG(0, geqk, 1.0, 1.0, (fun x -> ()));
+  TEST3ARG(0, eqk, 1, 1, (fun x -> ()));
+  TEST3ARG(0, eqk, 1.0, 1.0, (fun x -> ()));
+
+  TEST2ARG(1, poly, 2, report);
+  TEST2ARG(0, poly, 2, (fun x -> x));
+  TEST2ARG(0, poly, 2, (fun x -> ()));
+
+  TEST4ARG(1, composek, Solution.inck, Solution.inck, 1, (fun x -> x));
+  TEST4ARG(0, composek, Solution.inck, Solution.inck, 1, (fun x -> ()));
+  TEST4ARG(0, composek, (fun x -> fun k -> k (x = 1)), (fun x -> fun k -> k (not x)), 1, (fun x -> x));
+  TEST4ARG(0, composek, (fun x -> fun k -> k (x = 1)), (fun x -> fun k -> k (not x)), 1, (fun x -> ()));
+  TEST4ARG(0, composek, (fun x -> fun k -> k ()), (fun x -> fun k -> k 0.0), (), (fun x -> x));
+  TEST4ARG(0, composek, (fun x -> fun k -> k ()), (fun x -> fun k -> k 0.0), (), (fun x -> ()));
+
+  TEST1ARG(1, inverse_square_series, 10);
+  TEST2ARG(1, inverse_square_seriesk, 10, (fun x -> x));
+  TEST2ARG(0, inverse_square_seriesk, 10, (fun x -> ()));
+
+  TEST2ARG(1, rev_map, (fun x -> print_int x; x + 1), [1;2;3;4;5]);
+  TEST2ARG(0, rev_map, (fun x -> ()), [true;false]);
+  TEST3ARG(1, rev_mapk, (fun x -> fun k -> Solution.print_intk x (fun t -> Solution.inck x k)), [1;2;3;4;5], (fun x -> x));
+  TEST3ARG(0, rev_mapk, (fun x -> fun k -> Solution.print_intk x (fun t -> Solution.inck x k)), [1;2;3;4;5], (fun x -> ()));
+  TEST3ARG(0, rev_mapk, (fun x -> fun k -> k ()), [true;false], (fun x -> x));
+  TEST3ARG(0, rev_mapk, (fun x -> fun k -> k ()), [true;false], (fun x -> ()));
+
+  TEST2ARG(1, partition, [1;2;3;4;5], (fun x -> x >= 3));
+  TEST2ARG(0, partition, [true;false], (fun x -> not x));
+  TEST3ARG(1, partitionk, [1;2;3;4;5], (fun x -> fun k -> Solution.geqk x 3 k), (fun x -> x));
+  TEST3ARG(0, partitionk, [1;2;3;4;5], (fun x -> fun k -> Solution.geqk x 3 k), (fun x -> ()));
+  TEST3ARG(0, partitionk, [true;false], (fun x -> fun k -> k (not x)), (fun x -> x));
+  TEST3ARG(0, partitionk, [true;false], (fun x -> fun k -> k (not x)), (fun x -> ()));
+
+  TEST4ARG(1, findk, [1;2;3;4;5], (fun x -> fun k -> Solution.eqk x 3 k), (fun x -> x), (fun x -> print_string "element not found"; -1));
+  TEST4ARG(0, findk, [1;2;3;4;5], (fun x -> fun k -> Solution.eqk x 6 k), (fun x -> x), (fun x -> print_string "element not found"; -1));
+  TEST4ARG(0, findk, [true;false], (fun x -> fun k -> k (not x)), (fun x -> ()), (fun x -> print_string "element not found"; x));
+  TEST4ARG(0, findk, [true;true], (fun x -> fun k -> k (not x)), (fun x -> ()), (fun x -> print_string "element not found"; x))
+]
+(* Note: the last entry should not be followed by a semicolon. *)
+
+let extra_rubric = [ 
+  TEST3ARG(1, appk, [Solution.inck;Solution.inck;Solution.inck], 0, (fun x -> x));
+  TEST3ARG(0, appk, [Solution.notk;Solution.notk;Solution.notk], false, (fun x -> x))
+]
+

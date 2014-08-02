@@ -1,0 +1,82 @@
+(**************************************************************************
+ * You can add new test cases by adding new elements to the following lists
+ * Format is:
+ * TEST<X>ARG(<weight>, <function_name>, <arg1>, <arg2>, ..., <argX>)
+ *
+ * <X> is the number of argument that the function being tested takes.
+ **************************************************************************)
+open Mp5common
+
+let freeVarsInExp_stu e = Mp5common.mergesort (Student.freeVarsInExp e)
+let freeVarsInExp_sol e = Mp5common.mergesort (Solution.freeVarsInExp e)
+let freeAndBindingVarsInDec_stu d = 
+    let (f,b) = Student.freeAndBindingVarsInDec d
+    in (Mp5common.mergesort f, Mp5common.mergesort b)
+let freeAndBindingVarsInDec_sol d = 
+    let (f,b) = Solution.freeAndBindingVarsInDec d
+    in (Mp5common.mergesort f, Mp5common.mergesort b)
+let cps_exp_stu e k n =
+    let (ec,_) = Student.cps_exp e k n
+    in Mp5common.exp_cps_normalize ec (Solution.freeVarsInExp e) 
+let cps_exp_sol e k n =
+    let (ec,_) = Solution.cps_exp e k n
+    in Mp5common.exp_cps_normalize ec (Solution.freeVarsInExp e)
+let cps_dec_stu d k n =
+    let (ec,_) = Student.cps_dec d k n
+    in Mp5common.exp_cps_normalize ec 
+       (fst(Solution.freeAndBindingVarsInDec d))
+let cps_dec_sol d k n =
+    let (ec,_) = Solution.cps_dec d k n
+    in Mp5common.exp_cps_normalize ec
+       (fst(Solution.freeAndBindingVarsInDec d))
+
+
+(* This list is for regular problems *)
+let rubric =
+[
+  TEST1ARG(1, import_list, [("a",1);("b",2);("c",3)]);
+  TEST0ARG(1, list_all);
+  TEST1ARG(1, cal_max_exp_height, (BinOpAppExp (ConsOp,
+BinOpAppExp (CommaOp, ConstExp (StringConst "a"), ConstExp (IntConst 1)),
+BinOpAppExp (ConsOp,
+BinOpAppExp (CommaOp, ConstExp (StringConst "b"), ConstExp (IntConst 2)),
+BinOpAppExp (ConsOp,
+BinOpAppExp (CommaOp, ConstExp (StringConst "c"), ConstExp (IntConst 3)),
+ConstExp NilConst)))));
+  TEST1ARG(1, freeVarsInExp, (VarExp "x"));
+  TEST1ARG_TWOFUN(1, freeVarsInExp_sol, freeVarsInExp_stu, (IfExp(ConstExp (BoolConst true), VarExp "x", VarExp "y")));
+  TEST1ARG(1, freeVarsInExp, (FnExp("x", VarExp "x")));
+  TEST1ARG_TWOFUN(1, freeAndBindingVarsInDec_sol, freeAndBindingVarsInDec_stu,
+  (Rec ("f", "x", BinOpAppExp(IntPlusOp, VarExp "x",
+                                   AppExp(VarExp  "f", VarExp "y")))));
+  TEST1ARG_TWOFUN(1, freeVarsInExp_sol, freeVarsInExp_stu, (LetExp(Val("x", VarExp "y"), VarExp "x")));
+  TEST1ARG_TWOFUN(1, freeVarsInExp_sol, freeVarsInExp_stu, (LetExp(Rec("f","x",AppExp(VarExp "f",VarExp "x")),
+                                    (AppExp(VarExp "f",VarExp "y")))));
+  TEST3ARG(1, cps_exp, (VarExp "x"), (ContVarCPS 0), 1);
+  TEST3ARG_TWOFUN(1, cps_exp_sol, cps_exp_stu, (IfExp (VarExp "b", ConstExp (IntConst 2),
+                                         ConstExp (IntConst 5))),
+                                 (ContVarCPS 0), 1);
+  TEST3ARG_TWOFUN(1, cps_exp_sol, cps_exp_stu, (AppExp (VarExp "f", VarExp "x")),
+                         (ContVarCPS 0), 1);
+  TEST3ARG_TWOFUN(1, cps_exp_sol, cps_exp_stu, (BinOpAppExp (IntPlusOp, ConstExp(IntConst 5),
+                                              ConstExp(IntConst 1))),
+                          (ContVarCPS 3), 4);
+  TEST3ARG_TWOFUN(1, cps_exp_sol, cps_exp_stu, (MonOpAppExp (HdOp, ConstExp NilConst)),
+                                 (ContVarCPS 0), 1);
+  TEST3ARG_TWOFUN(1, cps_exp_sol, cps_exp_stu, (FnExp ("x", VarExp "x")),
+                                 (ContVarCPS 0), 1);
+  TEST3ARG_TWOFUN(1, cps_dec_sol, cps_dec_stu, (Val ("x", ConstExp(IntConst 2))),
+                                 (VarCPS (ContVarCPS 0, "x")), 1);
+  TEST3ARG_TWOFUN(1, cps_dec_sol, cps_dec_stu, (Seq (Val ("x", ConstExp(IntConst 2)),
+                                       Val ("y", VarExp "x"))),
+                                 (VarCPS (ContVarCPS 0, "x")), 1);
+  TEST3ARG_TWOFUN(1, cps_exp_sol, cps_exp_stu, (LetExp (Val ("x", ConstExp(IntConst 2)), VarExp "x")),
+                      (ContVarCPS 0), 1)
+]
+
+
+let extra_rubric = [ 
+  TEST3ARG_TWOFUN(1, cps_exp_sol, cps_exp_stu, (LetExp (Rec("f", "x",VarExp "x"),
+                                  ConstExp (IntConst 4))),
+                                 (ContVarCPS 1), 2)
+]

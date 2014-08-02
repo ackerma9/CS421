@@ -1,0 +1,3320 @@
+
+mp9 grade report for ackerma9
+================================
+
+Latest handin (graded copy) was - on_time
+
+*Regular Problems:
+Grading script score  => [131 / 131]
+Late Penalty          => 0
+Point adjustments     => 0
+Total                 => 131
+
+*Extra Credit:
+Grading script score for extra credit => [10 / 10]
+Late Penalty for extra credit         => 0
+Point adjustments for extra credit    => 0
+Total extra credit                    => 10
+
+
+mp9grader program output
+---------------------
+
+
+[1 / 1] parse "(*  Q1 *) val x = \"hi\";" (correct)
+[1 / 1] parse "          val x = true val x = 3 val x = 3.45;" (correct)
+[1 / 1] parse "          val x = nil val x = ();" (correct)
+[1 / 1] parse "(*  Q2 *) fst;" (correct)
+[1 / 1] parse "          snd 1;" (correct)
+[1 / 1] parse "          snd (tl (hd (~~ 1)));" (correct)
+[1 / 1] parse "(*  Q3 *) val x = (3);" (correct)
+[1 / 1] parse "          ((3));" (correct)
+[1 / 1] parse "          ((2 + 3) * (4 / 5));" (correct)
+[1 / 1] parse "(*  Q4 *) (3, 9);" (correct)
+[1 / 1] parse "          ((2, 3), (2, true));" (correct)
+[1 / 1] parse "          (((3), ((2))));" (correct)
+[2 / 2] parse "          (1, \"hi\", (true, false), 4.0);" (correct)
+[1 / 1] parse "(*  Q5 *) let val x = 3 in x end;" (correct)
+[1 / 1] parse "          val x = let val x = let val y = true in 3 end in 4 end;" (correct)
+[1 / 1] parse "          val x = let val x = 3 in let val y = 4 in 5 end end;" (correct)
+[1 / 1] parse "          (\"hi\"; 3);" (correct)
+[1 / 1] parse_fail "     (\"hi\"; true , 5);" (correct)
+[1 / 1] parse_fail "     let val x = 3; 4 in 5 end;" (correct)
+[2 / 2] parse "          val x = let val x = 3 in (let val y = 4 in 5; 6; 7 end ; true; false) end;" (correct)
+[1 / 1] parse "(*  Q6 *) val x = [1, 2, 3];" (correct)
+[1 / 1] parse "          [];" (correct)
+[1 / 1] parse "          [false];" (correct)
+[1 / 1] parse "          [[1, 2], (fn x => x), [[]]];" (correct)
+[1 / 1] parse_fail "     [1; 3];" (correct)
+[1 / 1] parse "(*  Q7 *) true orelse false;" (correct)
+[1 / 1] parse "         true andalso (false orelse 2) andalso 5;" (correct)
+[1 / 1] parse "         true orelse true andalso x;" (correct)
+[2 / 2] parse "         true andalso false andalso true andalso false orelse true orelse false orelse true;" (correct)
+[1 / 1] parse "(*  Q8 *) \"a\" < \"b\";" (correct)
+[1 / 1] parse "          3 > 4;" (correct)
+[1 / 1] parse "          3 >= 4;" (correct)
+[1 / 1] parse "          3 <= 4;" (correct)
+[1 / 1] parse "          3 <> 4;" (correct)
+[1 / 1] parse "          3 = 4;" (correct)
+[2 / 2] parse "          3 = 2 = 4;" (correct)
+[2 / 2] parse "          3 = 2 <> 1 > 2 = 6 > 7 < 8;" (correct)
+[2 / 2] parse "          true orelse 3 > 4 andalso 4 < 5 < 6 + 2;" (correct)
+[2 / 2] parse "(*  Q9 *) 3 :: 2 :: 1 :: nil;" (correct)
+[1 / 1] parse "          3 :: 2;" (correct)
+[1 / 1] parse "          3 :: [];" (correct)
+[1 / 1] parse "          nil :: (nil :: nil) :: nil;" (correct)
+[3 / 3] parse "          3 :: 5 :: (2.0, 4) :: [1,3];" (correct)
+[2 / 2] parse "          4 + 3.0 :: (2 > 5);" (correct)
+[1 / 1] parse "(* Q10 *) 3 + 4 * 2;" (correct)
+[1 / 1] parse "          3 - 4 - 2 * 9 > 10 andalso true;" (correct)
+[1 / 1] parse "          3 - 2 - 1 + 4 + 5 + 6;" (correct)
+[1 / 1] parse "          3 *. 2.0 -. 1.6 *. 4 /. 2.0 +. 4.13 ;" (correct)
+[1 / 1] parse "          3 * 2 - 4 * 5 + 3 * 10 + 32;" (correct)
+[1 / 1] parse "          \"hi\" ^ \"gh\" ^ \"er\";" (correct)
+[1 / 1] parse "          3 / 4 * 5.1 /. 6 +. (3.3 -. 2) *. false;" (correct)
+[1 / 1] parse "          ( 3 + (1 - 7) , 3 *. (2.0 -. 1.6));" (correct)
+[2 / 2] parse "          val x = 3+2 < 3+5;" (correct)
+[2 / 2] parse "          3 >= 4 andalso 3 * false > 2.2 orelse 4 *. f;" (correct)
+[1 / 1] parse "(* Q11 *) hd nil;" (correct)
+[1 / 1] parse "         hd(tl (3::2::[]));" (correct)
+[2 / 2] parse "         hd tl (3::2::[]);" (correct)
+[1 / 1] parse "         (fn x => x) 3;" (correct)
+[1 / 1] parse "         1 raise 2;" (correct)
+[2 / 2] parse "         2 > 3 andalso 4 < 5;" (correct)
+[2 / 2] parse "         ~~ hd tl tl [1,2,3];" (correct)
+[1 / 1] parse "(* Q12 *) op +;" (correct)
+[2 / 2] parse "          op >=;" (correct)
+[1 / 1] parse_fail "     op ~;" (correct)
+[1 / 1] parse_fail "     op 2;" (correct)
+[1 / 1] parse "(* Q13 *) fn x => if x then 3 else raise 4;" (correct)
+[1 / 1] parse "          if true then 1 else 0 + 2;" (correct)
+[2 / 2] parse "          2 * if true then 1 else 0 + raise 2;" (correct)
+[1 / 1] parse "          (fn x => ()) 2;" (correct)
+[1 / 1] parse "          raise 3;" (correct)
+[1 / 1] parse "          val x = fn x => 1;" (correct)
+[1 / 1] parse "          val x = fn x => fn y => fn z => 2;" (correct)
+[1 / 1] parse "          val x = if true then 2 else 3;" (correct)
+[1 / 1] parse "          val x = if false then fn x => 3 else 4;" (correct)
+[1 / 1] parse "          val x = fn x => if true then 2 else 3;" (correct)
+[1 / 1] parse "          val rec x a = fn a => fn b => fn a => a b;" (correct)
+[2 / 2] parse "          raise ~ hd tl [1,2];" (correct)
+[3 / 3] parse "          3 + 4 raise f 4;" (correct)
+[3 / 3] parse "          val x = if true then fn y => 33 else fn x => raise if 10 then 11 else 22;" (correct)
+[1 / 1] parse "(* Q14 *) val _ = \"hi\";" (correct)
+[1 / 1] parse "          let val _ = true in 5 end;" (correct)
+[1 / 1] parse "(* Q15 *) local val x = 2 in val y = x + 3 end;" (correct)
+[1 / 1] parse "          local val x = 2 in local val x = 2 in val y = x + 3 end end;" (correct)
+[1 / 1] parse "          local local val x = 2 in val y = x + 3 end in val y = x + 3 end;" (correct)
+[1 / 1] parse "(* Q16 *) val rec f g = g 5;" (correct)
+[1 / 1] parse "          val rec f x = 1;" (correct)
+[1 / 1] parse "          val rec f a b c d e f = a + b + c + d + e + f;" (correct)
+[2 / 2] parse "          val rec f a a a a = fn x => x + a;" (correct)
+[1 / 1] parse_fail "     val rec _ = 1;" (correct)
+[2 / 2] parse "          val rec f x = (fn y => 2 + y) 2;" (correct)
+[2 / 2] parse "          val rec f a a a a = (((fn x => fn y => fn z => x + y + z +x + a) 2 ) 3) 4;" (correct)
+[1 / 1] parse "(* Q17 *) fun f x a b c d a b c d = fn y => fn f => f x;" (correct)
+[1 / 1] parse "          fun f x = x;" (correct)
+[2 / 2] parse "          fun f x y z x = x;" (correct)
+[3 / 3] parse "          fun f x = fn g => fn x => fn g => fn a => fn f => fn b => fn h => fn b => (f g) b;" (correct)
+[2 / 2] parse "          fun f x = (fn y => if y then true else g y);" (correct)
+[2 / 2] parse_fail "     fun f 2 = g x;" (correct)
+[2 / 2] parse_fail "     fun f = g x;" (correct)
+[2 / 2] parse_fail "     fun f x = (fn y => if y then true else g y) false;" (correct)
+
+[1 / 1] parse "(* Q18 *) \"hi\" handle 1 => \"one\" | 2 => \"two\";" (correct)
+[1 / 1] parse "          true handle 4 => false | _ => true;" (correct)
+[1 / 1] parse "          true handle 4 => false | _ => true | _ => 10;" (correct)
+[1 / 1] parse "          fn x => 4 handle 4 => 4;" (correct)
+[1 / 1] parse "          if true then 2 else 3 handle 3 => 4;" (correct)
+[1 / 1] parse "          \"hi\" handle 1 => \"one\" | 2 => \"hello\" handle 3 => \"three\" | 4 => \"four\";" (correct)
+[1 / 1] parse "          true handle 4 => false | _ => true | 5 => 2 + if true then false else true;" (correct)
+[1 / 1] parse "          5 ; \"hi\" handle 3 => 5 ; 6 | 7 => \"b\";" (correct)
+[2 / 2] parse "          1 + 1 handle 4 => 3 * 2 | 1 => raise 2;" (correct)
+Total: [131 / 131]
+Extra: [10 / 10]
+
+Additional outout from compiling students code (may be empty)
+----------------------------------------------------
+
+
+   0  $accept : %entry% $end
+
+   1  main : expression SEMI
+   2       | dec SEMI
+
+   3  dec : atomic_dec
+   4      | dec atomic_dec
+
+   5  atomic_dec : VAL simp_bind
+   6             | VAL REC IDENT rec_var_name_bind
+   7             | FUN IDENT rec_var_name_bind
+   8             | LOCAL dec IN dec END
+
+   9  simp_bind : IDENT EQUALS expression
+  10            | UNDERSCORE EQUALS expression
+
+  11  rec_var_name_bind : IDENT EQUALS expression
+  12                    | IDENT rec_var_name_bind
+
+  13  expression : orelse_exp HANDLE exp_matches
+  14             | orelse_exp
+
+  15  orelse_exp : orelse_exp_no_if_fn_raise ORELSE andalso_exp
+  16             | andalso_exp
+
+  17  andalso_exp : andalso_exp_no_if_fn_raise ANDALSO rel_exp
+  18              | rel_exp
+
+  19  rel_exp : rel_exp_no_if_fn_raise rel cons_exp
+  20          | cons_exp
+
+  21  cons_exp : add_exp_no_if_fn_raise DCOLON cons_exp
+  22           | add_exp
+
+  23  add_exp : add_exp_no_if_fn_raise add mult_exp
+  24          | mult_exp
+
+  25  mult_exp : mult_exp_no_if_fn_raise mult nonop_exp
+  26           | nonop_exp
+
+  27  nonop_exp : if_fn_raise_exp
+  28            | app_exp
+
+  29  app_exp : atomic_or_monop_exp
+  30          | monadic_op app_exp
+  31          | app_exp_no_if_fn_raise_monop nonapp_exp
+
+  32  app_exp_no_if_fn_raise_monop : atomic_expression
+  33                               | app_exp_no_if_fn_raise_monop atomic_or_monop_exp
+
+  34  atomic_or_monop_exp : atomic_expression
+  35                      | monop_expression
+
+  36  nonapp_exp : atomic_or_monop_exp
+  37             | if_fn_raise_exp
+
+  38  atomic_expression : const
+  39                    | OP op_binop
+  40                    | IDENT
+  41                    | parenthesis_expression
+  42                    | list_expression
+  43                    | LET dec IN exp_seq END
+
+  44  monop_expression : NEG
+  45                   | HD
+  46                   | TL
+  47                   | FST
+  48                   | SND
+
+  49  if_fn_raise_exp : IF expression THEN expression ELSE orelse_exp
+  50                  | FN IDENT ARROW orelse_exp
+  51                  | RAISE orelse_exp
+
+  52  exp_matches : exp_match
+  53              | no_handle_exp_match PIPE exp_matches
+
+  54  exp_match : pattern ARROW expression
+
+  55  no_handle_exp_match : pattern ARROW orelse_exp
+
+  56  orelse_exp_no_if_fn_raise : orelse_exp_no_if_fn_raise ORELSE andalso_exp_no_if_fn_raise
+  57                            | andalso_exp_no_if_fn_raise
+
+  58  andalso_exp_no_if_fn_raise : andalso_exp_no_if_fn_raise ANDALSO rel_exp_no_if_fn_raise
+  59                             | rel_exp_no_if_fn_raise
+
+  60  rel_exp_no_if_fn_raise : rel_exp_no_if_fn_raise rel cons_exp_no_if_fn_raise
+  61                         | cons_exp_no_if_fn_raise
+
+  62  cons_exp_no_if_fn_raise : add_exp_no_if_fn_raise DCOLON cons_exp_no_if_fn_raise
+  63                          | add_exp_no_if_fn_raise
+
+  64  add_exp_no_if_fn_raise : add_exp_no_if_fn_raise add mult_exp_no_if_fn_raise
+  65                         | mult_exp_no_if_fn_raise
+
+  66  mult_exp_no_if_fn_raise : mult_exp_no_if_fn_raise mult app_exp_no_if_fn_raise
+  67                          | app_exp_no_if_fn_raise
+
+  68  app_exp_no_if_fn_raise : atomic_or_monop_exp
+  69                         | monadic_op app_exp_no_if_fn_raise
+  70                         | app_exp_no_if_fn_raise_monop atomic_or_monop_exp
+
+  71  list_expression : LBRAC exp_list RBRAC
+
+  72  exp_list : expression
+  73           | expression COMMA exp_list
+
+  74  parenthesis_expression : LPAREN expression RPAREN
+  75                         | LPAREN expression SEMI exp_seq RPAREN
+  76                         | LPAREN expression COMMA expression_pair RPAREN
+
+  77  expression_pair : expression
+  78                  | expression COMMA expression_pair
+
+  79  exp_seq : expression
+  80          | expression SEMI exp_seq
+
+  81  rel : EQUALS
+  82      | GT
+  83      | derived_rel
+
+  84  derived_rel : LT
+  85              | LEQ
+  86              | NEQ
+  87              | GEQ
+
+  88  op_binop : rel
+  89           | add
+  90           | mult
+  91           | DCOLON
+  92           | COMMA
+
+  93  add : PLUS
+  94      | MINUS
+  95      | DPLUS
+  96      | DMINUS
+  97      | CARAT
+
+  98  mult : TIMES
+  99       | DIV
+ 100       | DTIMES
+ 101       | DDIV
+
+ 102  const : INT
+ 103        | BOOL
+ 104        | REAL
+ 105        | STRING
+ 106        | LBRAC RBRAC
+ 107        | NIL
+ 108        | UNIT
+ 109        | LPAREN RPAREN
+
+ 110  monadic_op : NEG
+ 111             | HD
+ 112             | TL
+ 113             | FST
+ 114             | SND
+
+ 115  pattern : UNDERSCORE
+ 116          | INT
+
+ 117  %entry% : '\001' main
+
+state 0
+	$accept : . %entry% $end  (0)
+
+	'\001'  shift 1
+	.  error
+
+	%entry%  goto 2
+
+
+state 1
+	%entry% : '\001' . main  (117)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	LOCAL  shift 11
+	VAL  shift 12
+	IF  shift 13
+	FUN  shift 14
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	main  goto 25
+	expression  goto 26
+	dec  goto 27
+	atomic_dec  goto 28
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 2
+	$accept : %entry% . $end  (0)
+
+	$end  accept
+
+
+state 3
+	const : INT .  (102)
+
+	.  reduce 102
+
+
+state 4
+	const : REAL .  (104)
+
+	.  reduce 104
+
+
+state 5
+	const : BOOL .  (103)
+
+	.  reduce 103
+
+
+state 6
+	const : STRING .  (105)
+
+	.  reduce 105
+
+
+state 7
+	atomic_expression : IDENT .  (40)
+
+	.  reduce 40
+
+
+state 8
+	monop_expression : NEG .  (44)
+	monadic_op : NEG .  (110)
+
+	INT  reduce 110
+	REAL  reduce 110
+	BOOL  reduce 110
+	STRING  reduce 110
+	IDENT  reduce 110
+	NEG  reduce 110
+	PLUS  reduce 44
+	MINUS  reduce 44
+	TIMES  reduce 44
+	DIV  reduce 44
+	DPLUS  reduce 44
+	DMINUS  reduce 44
+	DTIMES  reduce 44
+	DDIV  reduce 44
+	CARAT  reduce 44
+	LT  reduce 44
+	GT  reduce 44
+	LEQ  reduce 44
+	GEQ  reduce 44
+	EQUALS  reduce 44
+	NEQ  reduce 44
+	PIPE  reduce 44
+	SEMI  reduce 44
+	DCOLON  reduce 44
+	NIL  reduce 110
+	LET  reduce 110
+	LOCAL  reduce 44
+	VAL  reduce 44
+	END  reduce 44
+	IN  reduce 44
+	THEN  reduce 44
+	ELSE  reduce 44
+	FUN  reduce 44
+	OP  reduce 110
+	HANDLE  reduce 44
+	ANDALSO  reduce 44
+	ORELSE  reduce 44
+	HD  reduce 110
+	TL  reduce 110
+	FST  reduce 110
+	SND  reduce 110
+	LBRAC  reduce 110
+	RBRAC  reduce 44
+	LPAREN  reduce 110
+	RPAREN  reduce 44
+	COMMA  reduce 44
+	UNIT  reduce 110
+
+
+state 9
+	const : NIL .  (107)
+
+	.  reduce 107
+
+
+state 10
+	atomic_expression : LET . dec IN exp_seq END  (43)
+
+	LOCAL  shift 11
+	VAL  shift 12
+	FUN  shift 14
+	.  error
+
+	dec  goto 53
+	atomic_dec  goto 28
+
+
+state 11
+	atomic_dec : LOCAL . dec IN dec END  (8)
+
+	LOCAL  shift 11
+	VAL  shift 12
+	FUN  shift 14
+	.  error
+
+	dec  goto 54
+	atomic_dec  goto 28
+
+
+state 12
+	atomic_dec : VAL . simp_bind  (5)
+	atomic_dec : VAL . REC IDENT rec_var_name_bind  (6)
+
+	IDENT  shift 55
+	REC  shift 56
+	UNDERSCORE  shift 57
+	.  error
+
+	simp_bind  goto 58
+
+
+state 13
+	if_fn_raise_exp : IF . expression THEN expression ELSE orelse_exp  (49)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 59
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 14
+	atomic_dec : FUN . IDENT rec_var_name_bind  (7)
+
+	IDENT  shift 60
+	.  error
+
+
+state 15
+	if_fn_raise_exp : FN . IDENT ARROW orelse_exp  (50)
+
+	IDENT  shift 61
+	.  error
+
+
+state 16
+	atomic_expression : OP . op_binop  (39)
+
+	PLUS  shift 62
+	MINUS  shift 63
+	TIMES  shift 64
+	DIV  shift 65
+	DPLUS  shift 66
+	DMINUS  shift 67
+	DTIMES  shift 68
+	DDIV  shift 69
+	CARAT  shift 70
+	LT  shift 71
+	GT  shift 72
+	LEQ  shift 73
+	GEQ  shift 74
+	EQUALS  shift 75
+	NEQ  shift 76
+	DCOLON  shift 77
+	COMMA  shift 78
+	.  error
+
+	rel  goto 79
+	add  goto 80
+	mult  goto 81
+	op_binop  goto 82
+	derived_rel  goto 83
+
+
+state 17
+	if_fn_raise_exp : RAISE . orelse_exp  (51)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	orelse_exp  goto 84
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 18
+	monop_expression : HD .  (45)
+	monadic_op : HD .  (111)
+
+	INT  reduce 111
+	REAL  reduce 111
+	BOOL  reduce 111
+	STRING  reduce 111
+	IDENT  reduce 111
+	NEG  reduce 111
+	PLUS  reduce 45
+	MINUS  reduce 45
+	TIMES  reduce 45
+	DIV  reduce 45
+	DPLUS  reduce 45
+	DMINUS  reduce 45
+	DTIMES  reduce 45
+	DDIV  reduce 45
+	CARAT  reduce 45
+	LT  reduce 45
+	GT  reduce 45
+	LEQ  reduce 45
+	GEQ  reduce 45
+	EQUALS  reduce 45
+	NEQ  reduce 45
+	PIPE  reduce 45
+	SEMI  reduce 45
+	DCOLON  reduce 45
+	NIL  reduce 111
+	LET  reduce 111
+	LOCAL  reduce 45
+	VAL  reduce 45
+	END  reduce 45
+	IN  reduce 45
+	THEN  reduce 45
+	ELSE  reduce 45
+	FUN  reduce 45
+	OP  reduce 111
+	HANDLE  reduce 45
+	ANDALSO  reduce 45
+	ORELSE  reduce 45
+	HD  reduce 111
+	TL  reduce 111
+	FST  reduce 111
+	SND  reduce 111
+	LBRAC  reduce 111
+	RBRAC  reduce 45
+	LPAREN  reduce 111
+	RPAREN  reduce 45
+	COMMA  reduce 45
+	UNIT  reduce 111
+
+
+state 19
+	monop_expression : TL .  (46)
+	monadic_op : TL .  (112)
+
+	INT  reduce 112
+	REAL  reduce 112
+	BOOL  reduce 112
+	STRING  reduce 112
+	IDENT  reduce 112
+	NEG  reduce 112
+	PLUS  reduce 46
+	MINUS  reduce 46
+	TIMES  reduce 46
+	DIV  reduce 46
+	DPLUS  reduce 46
+	DMINUS  reduce 46
+	DTIMES  reduce 46
+	DDIV  reduce 46
+	CARAT  reduce 46
+	LT  reduce 46
+	GT  reduce 46
+	LEQ  reduce 46
+	GEQ  reduce 46
+	EQUALS  reduce 46
+	NEQ  reduce 46
+	PIPE  reduce 46
+	SEMI  reduce 46
+	DCOLON  reduce 46
+	NIL  reduce 112
+	LET  reduce 112
+	LOCAL  reduce 46
+	VAL  reduce 46
+	END  reduce 46
+	IN  reduce 46
+	THEN  reduce 46
+	ELSE  reduce 46
+	FUN  reduce 46
+	OP  reduce 112
+	HANDLE  reduce 46
+	ANDALSO  reduce 46
+	ORELSE  reduce 46
+	HD  reduce 112
+	TL  reduce 112
+	FST  reduce 112
+	SND  reduce 112
+	LBRAC  reduce 112
+	RBRAC  reduce 46
+	LPAREN  reduce 112
+	RPAREN  reduce 46
+	COMMA  reduce 46
+	UNIT  reduce 112
+
+
+state 20
+	monop_expression : FST .  (47)
+	monadic_op : FST .  (113)
+
+	INT  reduce 113
+	REAL  reduce 113
+	BOOL  reduce 113
+	STRING  reduce 113
+	IDENT  reduce 113
+	NEG  reduce 113
+	PLUS  reduce 47
+	MINUS  reduce 47
+	TIMES  reduce 47
+	DIV  reduce 47
+	DPLUS  reduce 47
+	DMINUS  reduce 47
+	DTIMES  reduce 47
+	DDIV  reduce 47
+	CARAT  reduce 47
+	LT  reduce 47
+	GT  reduce 47
+	LEQ  reduce 47
+	GEQ  reduce 47
+	EQUALS  reduce 47
+	NEQ  reduce 47
+	PIPE  reduce 47
+	SEMI  reduce 47
+	DCOLON  reduce 47
+	NIL  reduce 113
+	LET  reduce 113
+	LOCAL  reduce 47
+	VAL  reduce 47
+	END  reduce 47
+	IN  reduce 47
+	THEN  reduce 47
+	ELSE  reduce 47
+	FUN  reduce 47
+	OP  reduce 113
+	HANDLE  reduce 47
+	ANDALSO  reduce 47
+	ORELSE  reduce 47
+	HD  reduce 113
+	TL  reduce 113
+	FST  reduce 113
+	SND  reduce 113
+	LBRAC  reduce 113
+	RBRAC  reduce 47
+	LPAREN  reduce 113
+	RPAREN  reduce 47
+	COMMA  reduce 47
+	UNIT  reduce 113
+
+
+state 21
+	monop_expression : SND .  (48)
+	monadic_op : SND .  (114)
+
+	INT  reduce 114
+	REAL  reduce 114
+	BOOL  reduce 114
+	STRING  reduce 114
+	IDENT  reduce 114
+	NEG  reduce 114
+	PLUS  reduce 48
+	MINUS  reduce 48
+	TIMES  reduce 48
+	DIV  reduce 48
+	DPLUS  reduce 48
+	DMINUS  reduce 48
+	DTIMES  reduce 48
+	DDIV  reduce 48
+	CARAT  reduce 48
+	LT  reduce 48
+	GT  reduce 48
+	LEQ  reduce 48
+	GEQ  reduce 48
+	EQUALS  reduce 48
+	NEQ  reduce 48
+	PIPE  reduce 48
+	SEMI  reduce 48
+	DCOLON  reduce 48
+	NIL  reduce 114
+	LET  reduce 114
+	LOCAL  reduce 48
+	VAL  reduce 48
+	END  reduce 48
+	IN  reduce 48
+	THEN  reduce 48
+	ELSE  reduce 48
+	FUN  reduce 48
+	OP  reduce 114
+	HANDLE  reduce 48
+	ANDALSO  reduce 48
+	ORELSE  reduce 48
+	HD  reduce 114
+	TL  reduce 114
+	FST  reduce 114
+	SND  reduce 114
+	LBRAC  reduce 114
+	RBRAC  reduce 48
+	LPAREN  reduce 114
+	RPAREN  reduce 48
+	COMMA  reduce 48
+	UNIT  reduce 114
+
+
+state 22
+	list_expression : LBRAC . exp_list RBRAC  (71)
+	const : LBRAC . RBRAC  (106)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	RBRAC  shift 85
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 86
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+	exp_list  goto 87
+
+
+state 23
+	parenthesis_expression : LPAREN . expression RPAREN  (74)
+	parenthesis_expression : LPAREN . expression SEMI exp_seq RPAREN  (75)
+	parenthesis_expression : LPAREN . expression COMMA expression_pair RPAREN  (76)
+	const : LPAREN . RPAREN  (109)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	RPAREN  shift 88
+	UNIT  shift 24
+	.  error
+
+	expression  goto 89
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 24
+	const : UNIT .  (108)
+
+	.  reduce 108
+
+
+state 25
+	%entry% : '\001' main .  (117)
+
+	.  reduce 117
+
+
+state 26
+	main : expression . SEMI  (1)
+
+	SEMI  shift 90
+	.  error
+
+
+state 27
+	main : dec . SEMI  (2)
+	dec : dec . atomic_dec  (4)
+
+	SEMI  shift 91
+	LOCAL  shift 11
+	VAL  shift 12
+	FUN  shift 14
+	.  error
+
+	atomic_dec  goto 92
+
+
+state 28
+	dec : atomic_dec .  (3)
+
+	.  reduce 3
+
+
+state 29
+	expression : orelse_exp . HANDLE exp_matches  (13)
+	expression : orelse_exp .  (14)
+
+	HANDLE  shift 93
+	SEMI  reduce 14
+	LOCAL  reduce 14
+	VAL  reduce 14
+	END  reduce 14
+	IN  reduce 14
+	THEN  reduce 14
+	ELSE  reduce 14
+	FUN  reduce 14
+	RBRAC  reduce 14
+	RPAREN  reduce 14
+	COMMA  reduce 14
+
+
+state 30
+	orelse_exp : orelse_exp_no_if_fn_raise . ORELSE andalso_exp  (15)
+	orelse_exp_no_if_fn_raise : orelse_exp_no_if_fn_raise . ORELSE andalso_exp_no_if_fn_raise  (56)
+
+	ORELSE  shift 94
+	.  error
+
+
+state 31
+	orelse_exp : andalso_exp .  (16)
+
+	.  reduce 16
+
+
+state 32
+	andalso_exp : andalso_exp_no_if_fn_raise . ANDALSO rel_exp  (17)
+	orelse_exp_no_if_fn_raise : andalso_exp_no_if_fn_raise .  (57)
+	andalso_exp_no_if_fn_raise : andalso_exp_no_if_fn_raise . ANDALSO rel_exp_no_if_fn_raise  (58)
+
+	ANDALSO  shift 95
+	ORELSE  reduce 57
+
+
+state 33
+	andalso_exp : rel_exp .  (18)
+
+	.  reduce 18
+
+
+state 34
+	rel_exp : rel_exp_no_if_fn_raise . rel cons_exp  (19)
+	andalso_exp_no_if_fn_raise : rel_exp_no_if_fn_raise .  (59)
+	rel_exp_no_if_fn_raise : rel_exp_no_if_fn_raise . rel cons_exp_no_if_fn_raise  (60)
+
+	LT  shift 71
+	GT  shift 72
+	LEQ  shift 73
+	GEQ  shift 74
+	EQUALS  shift 75
+	NEQ  shift 76
+	ANDALSO  reduce 59
+	ORELSE  reduce 59
+
+	rel  goto 96
+	derived_rel  goto 83
+
+
+state 35
+	rel_exp : cons_exp .  (20)
+
+	.  reduce 20
+
+
+state 36
+	cons_exp : add_exp_no_if_fn_raise . DCOLON cons_exp  (21)
+	add_exp : add_exp_no_if_fn_raise . add mult_exp  (23)
+	cons_exp_no_if_fn_raise : add_exp_no_if_fn_raise . DCOLON cons_exp_no_if_fn_raise  (62)
+	cons_exp_no_if_fn_raise : add_exp_no_if_fn_raise .  (63)
+	add_exp_no_if_fn_raise : add_exp_no_if_fn_raise . add mult_exp_no_if_fn_raise  (64)
+
+	PLUS  shift 62
+	MINUS  shift 63
+	DPLUS  shift 66
+	DMINUS  shift 67
+	CARAT  shift 70
+	DCOLON  shift 97
+	LT  reduce 63
+	GT  reduce 63
+	LEQ  reduce 63
+	GEQ  reduce 63
+	EQUALS  reduce 63
+	NEQ  reduce 63
+	ANDALSO  reduce 63
+	ORELSE  reduce 63
+
+	add  goto 98
+
+
+state 37
+	cons_exp : add_exp .  (22)
+
+	.  reduce 22
+
+
+state 38
+	add_exp : mult_exp .  (24)
+
+	.  reduce 24
+
+
+state 39
+	mult_exp : mult_exp_no_if_fn_raise . mult nonop_exp  (25)
+	add_exp_no_if_fn_raise : mult_exp_no_if_fn_raise .  (65)
+	mult_exp_no_if_fn_raise : mult_exp_no_if_fn_raise . mult app_exp_no_if_fn_raise  (66)
+
+	TIMES  shift 64
+	DIV  shift 65
+	DTIMES  shift 68
+	DDIV  shift 69
+	PLUS  reduce 65
+	MINUS  reduce 65
+	DPLUS  reduce 65
+	DMINUS  reduce 65
+	CARAT  reduce 65
+	LT  reduce 65
+	GT  reduce 65
+	LEQ  reduce 65
+	GEQ  reduce 65
+	EQUALS  reduce 65
+	NEQ  reduce 65
+	DCOLON  reduce 65
+	ANDALSO  reduce 65
+	ORELSE  reduce 65
+
+	mult  goto 99
+
+
+state 40
+	mult_exp : nonop_exp .  (26)
+
+	.  reduce 26
+
+
+state 41
+	nonop_exp : if_fn_raise_exp .  (27)
+
+	.  reduce 27
+
+
+state 42
+	nonop_exp : app_exp .  (28)
+
+	.  reduce 28
+
+
+state 43
+	app_exp : atomic_or_monop_exp .  (29)
+	app_exp_no_if_fn_raise : atomic_or_monop_exp .  (68)
+
+	PLUS  reduce 68
+	MINUS  reduce 68
+	TIMES  reduce 68
+	DIV  reduce 68
+	DPLUS  reduce 68
+	DMINUS  reduce 68
+	DTIMES  reduce 68
+	DDIV  reduce 68
+	CARAT  reduce 68
+	LT  reduce 68
+	GT  reduce 68
+	LEQ  reduce 68
+	GEQ  reduce 68
+	EQUALS  reduce 68
+	NEQ  reduce 68
+	PIPE  reduce 29
+	SEMI  reduce 29
+	DCOLON  reduce 68
+	LOCAL  reduce 29
+	VAL  reduce 29
+	END  reduce 29
+	IN  reduce 29
+	THEN  reduce 29
+	ELSE  reduce 29
+	FUN  reduce 29
+	HANDLE  reduce 29
+	ANDALSO  reduce 68
+	ORELSE  reduce 68
+	RBRAC  reduce 29
+	RPAREN  reduce 29
+	COMMA  reduce 29
+
+
+state 44
+	app_exp : monadic_op . app_exp  (30)
+	app_exp_no_if_fn_raise : monadic_op . app_exp_no_if_fn_raise  (69)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	OP  shift 16
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	app_exp  goto 100
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	app_exp_no_if_fn_raise  goto 101
+
+
+state 45
+	app_exp : app_exp_no_if_fn_raise_monop . nonapp_exp  (31)
+	app_exp_no_if_fn_raise_monop : app_exp_no_if_fn_raise_monop . atomic_or_monop_exp  (33)
+	app_exp_no_if_fn_raise : app_exp_no_if_fn_raise_monop . atomic_or_monop_exp  (70)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 102
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 103
+	TL  shift 104
+	FST  shift 105
+	SND  shift 106
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	if_fn_raise_exp  goto 107
+	atomic_or_monop_exp  goto 108
+	nonapp_exp  goto 109
+	atomic_expression  goto 110
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+
+
+state 46
+	app_exp_no_if_fn_raise_monop : atomic_expression .  (32)
+	atomic_or_monop_exp : atomic_expression .  (34)
+
+	INT  reduce 32
+	REAL  reduce 32
+	BOOL  reduce 32
+	STRING  reduce 32
+	IDENT  reduce 32
+	NEG  reduce 32
+	PLUS  reduce 34
+	MINUS  reduce 34
+	TIMES  reduce 34
+	DIV  reduce 34
+	DPLUS  reduce 34
+	DMINUS  reduce 34
+	DTIMES  reduce 34
+	DDIV  reduce 34
+	CARAT  reduce 34
+	LT  reduce 34
+	GT  reduce 34
+	LEQ  reduce 34
+	GEQ  reduce 34
+	EQUALS  reduce 34
+	NEQ  reduce 34
+	PIPE  reduce 34
+	SEMI  reduce 34
+	DCOLON  reduce 34
+	NIL  reduce 32
+	LET  reduce 32
+	LOCAL  reduce 34
+	VAL  reduce 34
+	END  reduce 34
+	IN  reduce 34
+	IF  reduce 32
+	THEN  reduce 34
+	ELSE  reduce 34
+	FUN  reduce 34
+	FN  reduce 32
+	OP  reduce 32
+	RAISE  reduce 32
+	HANDLE  reduce 34
+	ANDALSO  reduce 34
+	ORELSE  reduce 34
+	HD  reduce 32
+	TL  reduce 32
+	FST  reduce 32
+	SND  reduce 32
+	LBRAC  reduce 32
+	RBRAC  reduce 34
+	LPAREN  reduce 32
+	RPAREN  reduce 34
+	COMMA  reduce 34
+	UNIT  reduce 32
+
+
+state 47
+	atomic_or_monop_exp : monop_expression .  (35)
+
+	.  reduce 35
+
+
+state 48
+	atomic_expression : const .  (38)
+
+	.  reduce 38
+
+
+state 49
+	atomic_expression : parenthesis_expression .  (41)
+
+	.  reduce 41
+
+
+state 50
+	atomic_expression : list_expression .  (42)
+
+	.  reduce 42
+
+
+state 51
+	rel_exp_no_if_fn_raise : cons_exp_no_if_fn_raise .  (61)
+
+	.  reduce 61
+
+
+state 52
+	mult_exp_no_if_fn_raise : app_exp_no_if_fn_raise .  (67)
+
+	.  reduce 67
+
+
+state 53
+	dec : dec . atomic_dec  (4)
+	atomic_expression : LET dec . IN exp_seq END  (43)
+
+	LOCAL  shift 11
+	VAL  shift 12
+	IN  shift 111
+	FUN  shift 14
+	.  error
+
+	atomic_dec  goto 92
+
+
+state 54
+	dec : dec . atomic_dec  (4)
+	atomic_dec : LOCAL dec . IN dec END  (8)
+
+	LOCAL  shift 11
+	VAL  shift 12
+	IN  shift 112
+	FUN  shift 14
+	.  error
+
+	atomic_dec  goto 92
+
+
+state 55
+	simp_bind : IDENT . EQUALS expression  (9)
+
+	EQUALS  shift 113
+	.  error
+
+
+state 56
+	atomic_dec : VAL REC . IDENT rec_var_name_bind  (6)
+
+	IDENT  shift 114
+	.  error
+
+
+state 57
+	simp_bind : UNDERSCORE . EQUALS expression  (10)
+
+	EQUALS  shift 115
+	.  error
+
+
+state 58
+	atomic_dec : VAL simp_bind .  (5)
+
+	.  reduce 5
+
+
+state 59
+	if_fn_raise_exp : IF expression . THEN expression ELSE orelse_exp  (49)
+
+	THEN  shift 116
+	.  error
+
+
+state 60
+	atomic_dec : FUN IDENT . rec_var_name_bind  (7)
+
+	IDENT  shift 117
+	.  error
+
+	rec_var_name_bind  goto 118
+
+
+state 61
+	if_fn_raise_exp : FN IDENT . ARROW orelse_exp  (50)
+
+	ARROW  shift 119
+	.  error
+
+
+state 62
+	add : PLUS .  (93)
+
+	.  reduce 93
+
+
+state 63
+	add : MINUS .  (94)
+
+	.  reduce 94
+
+
+state 64
+	mult : TIMES .  (98)
+
+	.  reduce 98
+
+
+state 65
+	mult : DIV .  (99)
+
+	.  reduce 99
+
+
+state 66
+	add : DPLUS .  (95)
+
+	.  reduce 95
+
+
+state 67
+	add : DMINUS .  (96)
+
+	.  reduce 96
+
+
+state 68
+	mult : DTIMES .  (100)
+
+	.  reduce 100
+
+
+state 69
+	mult : DDIV .  (101)
+
+	.  reduce 101
+
+
+state 70
+	add : CARAT .  (97)
+
+	.  reduce 97
+
+
+state 71
+	derived_rel : LT .  (84)
+
+	.  reduce 84
+
+
+state 72
+	rel : GT .  (82)
+
+	.  reduce 82
+
+
+state 73
+	derived_rel : LEQ .  (85)
+
+	.  reduce 85
+
+
+state 74
+	derived_rel : GEQ .  (87)
+
+	.  reduce 87
+
+
+state 75
+	rel : EQUALS .  (81)
+
+	.  reduce 81
+
+
+state 76
+	derived_rel : NEQ .  (86)
+
+	.  reduce 86
+
+
+state 77
+	op_binop : DCOLON .  (91)
+
+	.  reduce 91
+
+
+state 78
+	op_binop : COMMA .  (92)
+
+	.  reduce 92
+
+
+state 79
+	op_binop : rel .  (88)
+
+	.  reduce 88
+
+
+state 80
+	op_binop : add .  (89)
+
+	.  reduce 89
+
+
+state 81
+	op_binop : mult .  (90)
+
+	.  reduce 90
+
+
+state 82
+	atomic_expression : OP op_binop .  (39)
+
+	.  reduce 39
+
+
+state 83
+	rel : derived_rel .  (83)
+
+	.  reduce 83
+
+
+state 84
+	if_fn_raise_exp : RAISE orelse_exp .  (51)
+
+	.  reduce 51
+
+
+state 85
+	const : LBRAC RBRAC .  (106)
+
+	.  reduce 106
+
+
+state 86
+	exp_list : expression .  (72)
+	exp_list : expression . COMMA exp_list  (73)
+
+	COMMA  shift 120
+	RBRAC  reduce 72
+
+
+state 87
+	list_expression : LBRAC exp_list . RBRAC  (71)
+
+	RBRAC  shift 121
+	.  error
+
+
+state 88
+	const : LPAREN RPAREN .  (109)
+
+	.  reduce 109
+
+
+state 89
+	parenthesis_expression : LPAREN expression . RPAREN  (74)
+	parenthesis_expression : LPAREN expression . SEMI exp_seq RPAREN  (75)
+	parenthesis_expression : LPAREN expression . COMMA expression_pair RPAREN  (76)
+
+	SEMI  shift 122
+	RPAREN  shift 123
+	COMMA  shift 124
+	.  error
+
+
+state 90
+	main : expression SEMI .  (1)
+
+	.  reduce 1
+
+
+state 91
+	main : dec SEMI .  (2)
+
+	.  reduce 2
+
+
+state 92
+	dec : dec atomic_dec .  (4)
+
+	.  reduce 4
+
+
+state 93
+	expression : orelse_exp HANDLE . exp_matches  (13)
+
+	INT  shift 125
+	UNDERSCORE  shift 126
+	.  error
+
+	exp_matches  goto 127
+	exp_match  goto 128
+	no_handle_exp_match  goto 129
+	pattern  goto 130
+
+
+state 94
+	orelse_exp : orelse_exp_no_if_fn_raise ORELSE . andalso_exp  (15)
+	orelse_exp_no_if_fn_raise : orelse_exp_no_if_fn_raise ORELSE . andalso_exp_no_if_fn_raise  (56)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	andalso_exp  goto 131
+	andalso_exp_no_if_fn_raise  goto 132
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 95
+	andalso_exp : andalso_exp_no_if_fn_raise ANDALSO . rel_exp  (17)
+	andalso_exp_no_if_fn_raise : andalso_exp_no_if_fn_raise ANDALSO . rel_exp_no_if_fn_raise  (58)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	rel_exp  goto 133
+	rel_exp_no_if_fn_raise  goto 134
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 96
+	rel_exp : rel_exp_no_if_fn_raise rel . cons_exp  (19)
+	rel_exp_no_if_fn_raise : rel_exp_no_if_fn_raise rel . cons_exp_no_if_fn_raise  (60)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	cons_exp  goto 135
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 136
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 97
+	cons_exp : add_exp_no_if_fn_raise DCOLON . cons_exp  (21)
+	cons_exp_no_if_fn_raise : add_exp_no_if_fn_raise DCOLON . cons_exp_no_if_fn_raise  (62)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	cons_exp  goto 137
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 138
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 98
+	add_exp : add_exp_no_if_fn_raise add . mult_exp  (23)
+	add_exp_no_if_fn_raise : add_exp_no_if_fn_raise add . mult_exp_no_if_fn_raise  (64)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	mult_exp  goto 139
+	mult_exp_no_if_fn_raise  goto 140
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 99
+	mult_exp : mult_exp_no_if_fn_raise mult . nonop_exp  (25)
+	mult_exp_no_if_fn_raise : mult_exp_no_if_fn_raise mult . app_exp_no_if_fn_raise  (66)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	nonop_exp  goto 141
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	app_exp_no_if_fn_raise  goto 142
+
+
+state 100
+	app_exp : monadic_op app_exp .  (30)
+
+	.  reduce 30
+
+
+state 101
+	app_exp_no_if_fn_raise : monadic_op app_exp_no_if_fn_raise .  (69)
+
+	.  reduce 69
+
+
+state 102
+	monop_expression : NEG .  (44)
+
+	.  reduce 44
+
+
+state 103
+	monop_expression : HD .  (45)
+
+	.  reduce 45
+
+
+state 104
+	monop_expression : TL .  (46)
+
+	.  reduce 46
+
+
+state 105
+	monop_expression : FST .  (47)
+
+	.  reduce 47
+
+
+state 106
+	monop_expression : SND .  (48)
+
+	.  reduce 48
+
+
+state 107
+	nonapp_exp : if_fn_raise_exp .  (37)
+
+	.  reduce 37
+
+
+state 108
+	app_exp_no_if_fn_raise_monop : app_exp_no_if_fn_raise_monop atomic_or_monop_exp .  (33)
+	nonapp_exp : atomic_or_monop_exp .  (36)
+	app_exp_no_if_fn_raise : app_exp_no_if_fn_raise_monop atomic_or_monop_exp .  (70)
+
+	INT  reduce 33
+	REAL  reduce 33
+	BOOL  reduce 33
+	STRING  reduce 33
+	IDENT  reduce 33
+	NEG  reduce 33
+	PLUS  reduce 70
+	MINUS  reduce 70
+	TIMES  reduce 70
+	DIV  reduce 70
+	DPLUS  reduce 70
+	DMINUS  reduce 70
+	DTIMES  reduce 70
+	DDIV  reduce 70
+	CARAT  reduce 70
+	LT  reduce 70
+	GT  reduce 70
+	LEQ  reduce 70
+	GEQ  reduce 70
+	EQUALS  reduce 70
+	NEQ  reduce 70
+	PIPE  reduce 36
+	SEMI  reduce 36
+	DCOLON  reduce 70
+	NIL  reduce 33
+	LET  reduce 33
+	LOCAL  reduce 36
+	VAL  reduce 36
+	END  reduce 36
+	IN  reduce 36
+	IF  reduce 33
+	THEN  reduce 36
+	ELSE  reduce 36
+	FUN  reduce 36
+	FN  reduce 33
+	OP  reduce 33
+	RAISE  reduce 33
+	HANDLE  reduce 36
+	ANDALSO  reduce 70
+	ORELSE  reduce 70
+	HD  reduce 33
+	TL  reduce 33
+	FST  reduce 33
+	SND  reduce 33
+	LBRAC  reduce 33
+	RBRAC  reduce 36
+	LPAREN  reduce 33
+	RPAREN  reduce 36
+	COMMA  reduce 36
+	UNIT  reduce 33
+
+
+state 109
+	app_exp : app_exp_no_if_fn_raise_monop nonapp_exp .  (31)
+
+	.  reduce 31
+
+
+state 110
+	atomic_or_monop_exp : atomic_expression .  (34)
+
+	.  reduce 34
+
+
+state 111
+	atomic_expression : LET dec IN . exp_seq END  (43)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 143
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	exp_seq  goto 144
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 112
+	atomic_dec : LOCAL dec IN . dec END  (8)
+
+	LOCAL  shift 11
+	VAL  shift 12
+	FUN  shift 14
+	.  error
+
+	dec  goto 145
+	atomic_dec  goto 28
+
+
+state 113
+	simp_bind : IDENT EQUALS . expression  (9)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 146
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 114
+	atomic_dec : VAL REC IDENT . rec_var_name_bind  (6)
+
+	IDENT  shift 117
+	.  error
+
+	rec_var_name_bind  goto 147
+
+
+state 115
+	simp_bind : UNDERSCORE EQUALS . expression  (10)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 148
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 116
+	if_fn_raise_exp : IF expression THEN . expression ELSE orelse_exp  (49)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 149
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 117
+	rec_var_name_bind : IDENT . EQUALS expression  (11)
+	rec_var_name_bind : IDENT . rec_var_name_bind  (12)
+
+	IDENT  shift 117
+	EQUALS  shift 150
+	.  error
+
+	rec_var_name_bind  goto 151
+
+
+state 118
+	atomic_dec : FUN IDENT rec_var_name_bind .  (7)
+
+	.  reduce 7
+
+
+state 119
+	if_fn_raise_exp : FN IDENT ARROW . orelse_exp  (50)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	orelse_exp  goto 152
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 120
+	exp_list : expression COMMA . exp_list  (73)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 86
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+	exp_list  goto 153
+
+
+state 121
+	list_expression : LBRAC exp_list RBRAC .  (71)
+
+	.  reduce 71
+
+
+state 122
+	parenthesis_expression : LPAREN expression SEMI . exp_seq RPAREN  (75)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 143
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	exp_seq  goto 154
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 123
+	parenthesis_expression : LPAREN expression RPAREN .  (74)
+
+	.  reduce 74
+
+
+state 124
+	parenthesis_expression : LPAREN expression COMMA . expression_pair RPAREN  (76)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 155
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+	expression_pair  goto 156
+
+
+state 125
+	pattern : INT .  (116)
+
+	.  reduce 116
+
+
+state 126
+	pattern : UNDERSCORE .  (115)
+
+	.  reduce 115
+
+
+state 127
+	expression : orelse_exp HANDLE exp_matches .  (13)
+
+	.  reduce 13
+
+
+state 128
+	exp_matches : exp_match .  (52)
+
+	.  reduce 52
+
+
+state 129
+	exp_matches : no_handle_exp_match . PIPE exp_matches  (53)
+
+	PIPE  shift 157
+	.  error
+
+
+state 130
+	exp_match : pattern . ARROW expression  (54)
+	no_handle_exp_match : pattern . ARROW orelse_exp  (55)
+
+	ARROW  shift 158
+	.  error
+
+
+state 131
+	orelse_exp : orelse_exp_no_if_fn_raise ORELSE andalso_exp .  (15)
+
+	.  reduce 15
+
+
+state 132
+	andalso_exp : andalso_exp_no_if_fn_raise . ANDALSO rel_exp  (17)
+	orelse_exp_no_if_fn_raise : orelse_exp_no_if_fn_raise ORELSE andalso_exp_no_if_fn_raise .  (56)
+	andalso_exp_no_if_fn_raise : andalso_exp_no_if_fn_raise . ANDALSO rel_exp_no_if_fn_raise  (58)
+
+	ANDALSO  shift 95
+	ORELSE  reduce 56
+
+
+state 133
+	andalso_exp : andalso_exp_no_if_fn_raise ANDALSO rel_exp .  (17)
+
+	.  reduce 17
+
+
+state 134
+	rel_exp : rel_exp_no_if_fn_raise . rel cons_exp  (19)
+	andalso_exp_no_if_fn_raise : andalso_exp_no_if_fn_raise ANDALSO rel_exp_no_if_fn_raise .  (58)
+	rel_exp_no_if_fn_raise : rel_exp_no_if_fn_raise . rel cons_exp_no_if_fn_raise  (60)
+
+	LT  shift 71
+	GT  shift 72
+	LEQ  shift 73
+	GEQ  shift 74
+	EQUALS  shift 75
+	NEQ  shift 76
+	ANDALSO  reduce 58
+	ORELSE  reduce 58
+
+	rel  goto 96
+	derived_rel  goto 83
+
+
+state 135
+	rel_exp : rel_exp_no_if_fn_raise rel cons_exp .  (19)
+
+	.  reduce 19
+
+
+state 136
+	rel_exp_no_if_fn_raise : rel_exp_no_if_fn_raise rel cons_exp_no_if_fn_raise .  (60)
+
+	.  reduce 60
+
+
+state 137
+	cons_exp : add_exp_no_if_fn_raise DCOLON cons_exp .  (21)
+
+	.  reduce 21
+
+
+state 138
+	cons_exp_no_if_fn_raise : add_exp_no_if_fn_raise DCOLON cons_exp_no_if_fn_raise .  (62)
+
+	.  reduce 62
+
+
+state 139
+	add_exp : add_exp_no_if_fn_raise add mult_exp .  (23)
+
+	.  reduce 23
+
+
+state 140
+	mult_exp : mult_exp_no_if_fn_raise . mult nonop_exp  (25)
+	add_exp_no_if_fn_raise : add_exp_no_if_fn_raise add mult_exp_no_if_fn_raise .  (64)
+	mult_exp_no_if_fn_raise : mult_exp_no_if_fn_raise . mult app_exp_no_if_fn_raise  (66)
+
+	TIMES  shift 64
+	DIV  shift 65
+	DTIMES  shift 68
+	DDIV  shift 69
+	PLUS  reduce 64
+	MINUS  reduce 64
+	DPLUS  reduce 64
+	DMINUS  reduce 64
+	CARAT  reduce 64
+	LT  reduce 64
+	GT  reduce 64
+	LEQ  reduce 64
+	GEQ  reduce 64
+	EQUALS  reduce 64
+	NEQ  reduce 64
+	DCOLON  reduce 64
+	ANDALSO  reduce 64
+	ORELSE  reduce 64
+
+	mult  goto 99
+
+
+state 141
+	mult_exp : mult_exp_no_if_fn_raise mult nonop_exp .  (25)
+
+	.  reduce 25
+
+
+state 142
+	mult_exp_no_if_fn_raise : mult_exp_no_if_fn_raise mult app_exp_no_if_fn_raise .  (66)
+
+	.  reduce 66
+
+
+state 143
+	exp_seq : expression .  (79)
+	exp_seq : expression . SEMI exp_seq  (80)
+
+	SEMI  shift 159
+	END  reduce 79
+	RPAREN  reduce 79
+
+
+state 144
+	atomic_expression : LET dec IN exp_seq . END  (43)
+
+	END  shift 160
+	.  error
+
+
+state 145
+	dec : dec . atomic_dec  (4)
+	atomic_dec : LOCAL dec IN dec . END  (8)
+
+	LOCAL  shift 11
+	VAL  shift 12
+	END  shift 161
+	FUN  shift 14
+	.  error
+
+	atomic_dec  goto 92
+
+
+state 146
+	simp_bind : IDENT EQUALS expression .  (9)
+
+	.  reduce 9
+
+
+state 147
+	atomic_dec : VAL REC IDENT rec_var_name_bind .  (6)
+
+	.  reduce 6
+
+
+state 148
+	simp_bind : UNDERSCORE EQUALS expression .  (10)
+
+	.  reduce 10
+
+
+state 149
+	if_fn_raise_exp : IF expression THEN expression . ELSE orelse_exp  (49)
+
+	ELSE  shift 162
+	.  error
+
+
+state 150
+	rec_var_name_bind : IDENT EQUALS . expression  (11)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 163
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 151
+	rec_var_name_bind : IDENT rec_var_name_bind .  (12)
+
+	.  reduce 12
+
+
+state 152
+	if_fn_raise_exp : FN IDENT ARROW orelse_exp .  (50)
+
+	.  reduce 50
+
+
+state 153
+	exp_list : expression COMMA exp_list .  (73)
+
+	.  reduce 73
+
+
+state 154
+	parenthesis_expression : LPAREN expression SEMI exp_seq . RPAREN  (75)
+
+	RPAREN  shift 164
+	.  error
+
+
+state 155
+	expression_pair : expression .  (77)
+	expression_pair : expression . COMMA expression_pair  (78)
+
+	COMMA  shift 165
+	RPAREN  reduce 77
+
+
+state 156
+	parenthesis_expression : LPAREN expression COMMA expression_pair . RPAREN  (76)
+
+	RPAREN  shift 166
+	.  error
+
+
+state 157
+	exp_matches : no_handle_exp_match PIPE . exp_matches  (53)
+
+	INT  shift 125
+	UNDERSCORE  shift 126
+	.  error
+
+	exp_matches  goto 167
+	exp_match  goto 128
+	no_handle_exp_match  goto 129
+	pattern  goto 130
+
+
+state 158
+	exp_match : pattern ARROW . expression  (54)
+	no_handle_exp_match : pattern ARROW . orelse_exp  (55)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 168
+	orelse_exp  goto 169
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 159
+	exp_seq : expression SEMI . exp_seq  (80)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 143
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	exp_seq  goto 170
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 160
+	atomic_expression : LET dec IN exp_seq END .  (43)
+
+	.  reduce 43
+
+
+state 161
+	atomic_dec : LOCAL dec IN dec END .  (8)
+
+	.  reduce 8
+
+
+state 162
+	if_fn_raise_exp : IF expression THEN expression ELSE . orelse_exp  (49)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	orelse_exp  goto 171
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+
+
+state 163
+	rec_var_name_bind : IDENT EQUALS expression .  (11)
+
+	.  reduce 11
+
+
+state 164
+	parenthesis_expression : LPAREN expression SEMI exp_seq RPAREN .  (75)
+
+	.  reduce 75
+
+
+state 165
+	expression_pair : expression COMMA . expression_pair  (78)
+
+	INT  shift 3
+	REAL  shift 4
+	BOOL  shift 5
+	STRING  shift 6
+	IDENT  shift 7
+	NEG  shift 8
+	NIL  shift 9
+	LET  shift 10
+	IF  shift 13
+	FN  shift 15
+	OP  shift 16
+	RAISE  shift 17
+	HD  shift 18
+	TL  shift 19
+	FST  shift 20
+	SND  shift 21
+	LBRAC  shift 22
+	LPAREN  shift 23
+	UNIT  shift 24
+	.  error
+
+	expression  goto 155
+	orelse_exp  goto 29
+	orelse_exp_no_if_fn_raise  goto 30
+	andalso_exp  goto 31
+	andalso_exp_no_if_fn_raise  goto 32
+	rel_exp  goto 33
+	rel_exp_no_if_fn_raise  goto 34
+	cons_exp  goto 35
+	add_exp_no_if_fn_raise  goto 36
+	add_exp  goto 37
+	mult_exp  goto 38
+	mult_exp_no_if_fn_raise  goto 39
+	nonop_exp  goto 40
+	if_fn_raise_exp  goto 41
+	app_exp  goto 42
+	atomic_or_monop_exp  goto 43
+	monadic_op  goto 44
+	app_exp_no_if_fn_raise_monop  goto 45
+	atomic_expression  goto 46
+	monop_expression  goto 47
+	const  goto 48
+	parenthesis_expression  goto 49
+	list_expression  goto 50
+	cons_exp_no_if_fn_raise  goto 51
+	app_exp_no_if_fn_raise  goto 52
+	expression_pair  goto 172
+
+
+state 166
+	parenthesis_expression : LPAREN expression COMMA expression_pair RPAREN .  (76)
+
+	.  reduce 76
+
+
+state 167
+	exp_matches : no_handle_exp_match PIPE exp_matches .  (53)
+
+	.  reduce 53
+
+
+state 168
+	exp_match : pattern ARROW expression .  (54)
+
+	.  reduce 54
+
+
+state 169
+	expression : orelse_exp . HANDLE exp_matches  (13)
+	expression : orelse_exp .  (14)
+	no_handle_exp_match : pattern ARROW orelse_exp .  (55)
+
+	HANDLE  shift 93
+	PIPE  reduce 55
+	SEMI  reduce 14
+	LOCAL  reduce 14
+	VAL  reduce 14
+	END  reduce 14
+	IN  reduce 14
+	THEN  reduce 14
+	ELSE  reduce 14
+	FUN  reduce 14
+	RBRAC  reduce 14
+	RPAREN  reduce 14
+	COMMA  reduce 14
+
+
+state 170
+	exp_seq : expression SEMI exp_seq .  (80)
+
+	.  reduce 80
+
+
+state 171
+	if_fn_raise_exp : IF expression THEN expression ELSE orelse_exp .  (49)
+
+	.  reduce 49
+
+
+state 172
+	expression_pair : expression COMMA expression_pair .  (78)
+
+	.  reduce 78
+
+
+65 terminals, 45 nonterminals
+118 grammar rules, 173 states
+
+Student's code (with comments and point adjustments)
+----------------------------------------------------
+
+
+/* Use the expression datatype defined in expressions.ml: */
+/* Contributors mrlu2 */
+%{
+    open Mp9common
+(* add any extra code here *)
+let apply_binop binop x y = BinOpAppExp(binop, x, y)
+let apply_monop monop x = MonOpAppExp( monop, x )
+let make_orelse x y = IfExp(x, ConstExp(BoolConst true), y)
+let make_andalso x y = IfExp(x, y, ConstExp(BoolConst false))
+let apply_not x = IfExp(x, ConstExp(BoolConst false), ConstExp(BoolConst true))
+
+%}
+
+/* Define the tokens of the language: */
+%token <int> INT
+%token <float> REAL
+%token <bool> BOOL
+%token <string> STRING IDENT
+%token <(int*int)> OPCOM CLCOM
+%token NEG PLUS MINUS TIMES DIV DPLUS DMINUS DTIMES DDIV CARAT LT GT LEQ GEQ
+       EQUALS NEQ PIPE ARROW SEMI DCOLON AT NIL LET LOCAL VAL REC AND END IN
+       IF THEN ELSE FUN FN OP MOD RAISE HANDLE WITH NOT ANDALSO ORELSE
+       HD TL FST SND
+       LBRAC RBRAC LPAREN RPAREN COMMA UNDERSCORE
+       UNIT ERROR EOF
+
+/* Define the "goal" nonterminal of the grammar: */
+%start main
+%type <Mp9common.dec> main
+
+%%
+
+main:    expression SEMI                             { Val("it", $1) }
+  | dec SEMI                                    { $1 }
+
+dec:
+    atomic_dec                                  { $1 }
+  | dec atomic_dec                              { Seq($1, $2) }
+
+atomic_dec:
+    VAL simp_bind                               { Val (fst $2, snd $2) }
+  | VAL REC IDENT rec_var_name_bind		{ Rec ($3, fst $4, snd $4) }
+  | FUN IDENT rec_var_name_bind                 { Rec ($2, fst $3, snd $3) }
+  | LOCAL dec IN dec END                        { Local($2,$4) }
+
+simp_bind:
+    IDENT EQUALS expression                     { ($1, $3) }
+  | UNDERSCORE EQUALS expression                { ("", $3) }
+
+rec_var_name_bind:
+  IDENT EQUALS expression			{ ($1, $3)  }
+  | IDENT rec_var_name_bind			{ ( $1, FnExp(fst $2, snd $2) ) }
+
+expression:
+    orelse_exp HANDLE exp_matches            { let x::ys = $3 in HandleExp ($1, fst(x), snd(x), ys) }
+  | orelse_exp                                  { $1 }
+
+/* an orelse_exp can't contain an unbracketed handle */
+orelse_exp:
+    orelse_exp_no_if_fn_raise ORELSE andalso_exp        { make_orelse $1 $3 }
+  | andalso_exp                                            { $1 }
+
+andalso_exp:
+    andalso_exp_no_if_fn_raise ANDALSO rel_exp      { make_andalso $1 $3 }
+  | rel_exp                                            { $1 }
+
+rel_exp:
+    rel_exp_no_if_fn_raise rel cons_exp                { $2 $1 $3 }
+  | cons_exp                                           { $1 }
+
+cons_exp:
+    add_exp_no_if_fn_raise DCOLON cons_exp             { apply_binop ConsOp $1 $3 }
+  | add_exp                                            { $1 }
+
+add_exp:
+    add_exp_no_if_fn_raise add mult_exp                { $2 $1 $3 }
+  | mult_exp                                           { $1 }
+
+mult_exp:
+    mult_exp_no_if_fn_raise mult nonop_exp             { $2 $1 $3 }
+  | nonop_exp                                          { $1 }
+
+nonop_exp:
+    if_fn_raise_exp                      { $1 }
+  | app_exp                                     { $1 }
+
+
+app_exp:
+    atomic_or_monop_exp                           { $1 }
+  | monadic_op app_exp	                        { MonOpAppExp($1, $2)}
+  | app_exp_no_if_fn_raise_monop nonapp_exp    { AppExp($1,$2) }
+
+app_exp_no_if_fn_raise_monop:
+    atomic_expression                           { $1 }
+  | app_exp_no_if_fn_raise_monop atomic_or_monop_exp    { AppExp($1,$2) }
+
+atomic_or_monop_exp:
+    atomic_expression                           { $1 }
+  | monop_expression			{ FnExp( "x", $1 (VarExp "x") ) }
+
+nonapp_exp:
+    atomic_or_monop_exp                           { $1 }
+  | if_fn_raise_exp                      { $1 }
+
+atomic_expression:
+    const                                       { ConstExp $1 }
+  | OP op_binop                              { FnExp("x", (FnExp("y", $2 (VarExp "x") (VarExp "y")))) }
+  | IDENT                                       { VarExp $1 }
+  | parenthesis_expression                            { $1 }
+  | list_expression                             { $1 }
+  | LET dec IN exp_seq END                      { LetExp($2, $4) }
+
+monop_expression:
+    NEG                         { fun x -> apply_monop IntNegOp x }
+  | HD                          { fun x -> apply_monop HdOp x}
+  | TL                          { fun x -> apply_monop TlOp x}
+  | FST                         { fun x -> apply_monop FstOp x}
+  | SND                         { fun x -> apply_monop SndOp x }
+
+if_fn_raise_exp:
+    IF expression THEN expression ELSE orelse_exp   { IfExp($2, $4, $6) }
+  | FN IDENT ARROW orelse_exp                       { FnExp($2, $4) }
+  | RAISE orelse_exp                                { RaiseExp $2 }
+
+exp_matches:
+    exp_match                                   { [$1] }
+  | no_handle_exp_match PIPE exp_matches        { $1::$3 }
+
+exp_match:
+    pattern ARROW expression                        { ($1, $3) }
+
+no_handle_exp_match:
+    pattern ARROW orelse_exp                          { ($1, $3) }
+
+orelse_exp_no_if_fn_raise:
+    orelse_exp_no_if_fn_raise ORELSE andalso_exp_no_if_fn_raise   { make_orelse $1 $3 }
+  | andalso_exp_no_if_fn_raise                                       { $1 }
+
+andalso_exp_no_if_fn_raise:
+    andalso_exp_no_if_fn_raise ANDALSO rel_exp_no_if_fn_raise { make_andalso $1 $3 }
+  | rel_exp_no_if_fn_raise                                       { $1 }
+
+rel_exp_no_if_fn_raise:
+    rel_exp_no_if_fn_raise rel cons_exp_no_if_fn_raise    { $2 $1 $3 }
+  | cons_exp_no_if_fn_raise                                      { $1 }
+
+cons_exp_no_if_fn_raise:
+    add_exp_no_if_fn_raise DCOLON cons_exp_no_if_fn_raise  { apply_binop ConsOp $1 $3 }
+  | add_exp_no_if_fn_raise                                        { $1 }
+
+add_exp_no_if_fn_raise:
+    add_exp_no_if_fn_raise add mult_exp_no_if_fn_raise          { $2 $1 $3 }
+  | mult_exp_no_if_fn_raise                                     { $1 }
+
+mult_exp_no_if_fn_raise:
+    mult_exp_no_if_fn_raise mult app_exp_no_if_fn_raise         { $2 $1 $3 }
+  | app_exp_no_if_fn_raise                                      { $1 }
+
+app_exp_no_if_fn_raise:
+    atomic_or_monop_exp                           { $1 }
+  | monadic_op app_exp_no_if_fn_raise           { MonOpAppExp($1, $2)}
+  | app_exp_no_if_fn_raise_monop atomic_or_monop_exp    { AppExp($1,$2) }
+
+list_expression:
+    LBRAC exp_list RBRAC                   { $2 }
+
+exp_list:
+    expression                                  { apply_binop ConsOp $1 (ConstExp NilConst) }
+  | expression COMMA exp_list              { apply_binop ConsOp $1 $3 }
+
+parenthesis_expression:
+    LPAREN expression RPAREN                    { $2 }
+  | LPAREN expression SEMI exp_seq RPAREN       { LetExp(Val("", $2),$4) }
+  | LPAREN expression COMMA expression_pair RPAREN     { apply_binop CommaOp $2 $4 }
+
+expression_pair:
+    expression                                  { $1 }
+  | expression COMMA expression_pair                   { apply_binop CommaOp $1 $3 }
+
+exp_seq:
+    expression                                  { $1 }
+  | expression SEMI exp_seq                     { LetExp(Val("", $1),$3) }
+
+rel:
+    EQUALS          { apply_binop EqOp }
+  | GT              { apply_binop GreaterOp }
+  | derived_rel     { $1 }
+
+derived_rel:
+    LT              { fun x y -> apply_binop GreaterOp y x }
+  | LEQ             { fun x y -> make_orelse (apply_binop GreaterOp y x) (apply_binop EqOp x y) }
+  | NEQ             { fun x y -> apply_not(apply_binop EqOp x y) }
+  | GEQ             { fun x y -> make_orelse (apply_binop GreaterOp x y) (apply_binop EqOp x y) }
+
+op_binop:
+    rel             { $1 }
+  | add             { $1 }
+  | mult            { $1 }
+  | DCOLON          { fun x y -> apply_binop ConsOp x y}
+  | COMMA           { fun x y -> apply_binop CommaOp x y}
+
+add:
+    PLUS            { fun x y -> apply_binop IntPlusOp x y}
+  | MINUS           { fun x y -> apply_binop IntMinusOp x y}
+  | DPLUS           { fun x y -> apply_binop RealPlusOp x y}
+  | DMINUS          { fun x y -> apply_binop RealMinusOp x y}
+  | CARAT           { fun x y -> apply_binop ConcatOp x y}
+
+mult:
+    TIMES           { fun x y -> apply_binop IntTimesOp x y}
+  | DIV             { fun x y -> apply_binop IntDivOp x y}
+  | DTIMES          { fun x y -> apply_binop RealTimesOp x y}
+  | DDIV            { fun x y -> apply_binop RealDivOp x y}
+
+const:
+    INT                         { IntConst $1 }
+  | BOOL            { BoolConst $1 }
+  | REAL            { RealConst $1 }
+  | STRING          { StringConst $1 }
+  | LBRAC RBRAC         { NilConst }
+  | NIL                         { NilConst }
+  | UNIT            { UnitConst }
+  | LPAREN RPAREN               { UnitConst }
+
+
+monadic_op:
+   NEG                         { IntNegOp }
+  | HD                          { HdOp }
+  | TL                          { TlOp }
+  | FST                         { FstOp }
+  | SND                         { SndOp }
+
+pattern:
+    UNDERSCORE  { None }
+  | INT         { Some $1 }
+
+
+Stdout
+----------------------------------------------------
+
+

@@ -1,0 +1,30 @@
+rubric HW2:
+
+(* 1 *) is worth four points. x, y, plus_x and 4 are worthy one point,respectively. The closure of plus_x must be exactly correct, otherwise, the student will lose one point.
+
+(* 2 *) is worth two points. sub_z and y are worth one point, respectively. The closure of sub_z must be exactly correct, otherwise, the student will lose one point.
+
+(* 3 *) is worth two points. The body and environment of f_z are worth one point, respectively.
+
+
+For evaluating f_z:
+
+No deduction for students who make mistakes in their first question.
+
+One point for putting the value of y into the function body. 
+
+One point for having the key word "app" for function calls.
+
+Four points for students that use "app" to evaluate a function body and put the correct value in plus_x in the condition body of an if_else statement. Students who put the values everywhere in the if_else statement will lose two points.
+
+Three points for correctly evaluating the plus_x funtion.
+
+Two points for evaluating the correct branch in an if_else statement. Student who do not write the If "2 < 4 then" and "If true then" steps will lose one point, respectively. 
+
+Two points for putting "plus_x z" and "plus_x 4" steps in their solutions.
+
+Three points for knowing how to evaluate the "plus_x" function. 
+
+One point for knowing the final result.
+
+Any ill-form solution is not acceptable. Ill-form solutions will lose points according to where they make mistakes based on the above scenario.

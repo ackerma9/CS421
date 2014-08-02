@@ -1,0 +1,114 @@
+open Mp10common
+let rubric_version = "1.0"
+let rubric_title = "CS421 Fasll 2012 MP10"
+
+(**************************************************************************
+ * You can add new test cases by adding new elements to the following lists
+ * Format is:
+ * TEST<X>ARG(<weight>, <function_name>, <arg1>, <arg2>, ..., <argX>)
+ *
+ * <X> is the number of argument that the function being tested takes.
+ **************************************************************************)
+
+let parse s = Micromlparse.main Micromllex.token (Lexing.from_string s)
+
+(* These lists are for regular problems *)
+
+let eval_exp_tests = 
+[
+(* Problem 1 *)
+(* parse "2;" *)
+TEST1ARG(1, eval_exp, (ConstExp(IntConst 2), []));
+
+(* Problem 2 *)
+(* parse "val x = 4;" *)
+TEST1ARG(1, eval_dec, (Val ("x", ConstExp (IntConst 4)), []));
+
+(* parse "val _ = 4;" *)
+TEST1ARG(1, eval_dec, (Val ("", ConstExp (IntConst 4)), []));
+
+(* problem 3 *)
+(* parse "x;" *)
+TEST1ARG(1, eval_exp, (VarExp "x", [("x", IntVal 2)]));
+
+(* Problem 4 *)
+(* parse "fn x => x;" *)
+TEST1ARG(1, eval_exp, (FnExp ("x", VarExp "x"), []));
+
+(* Problem 5 *)
+(* parse "(fn x => x) 7;" *)
+TEST1ARG(1, eval_exp, (AppExp (FnExp ("x", VarExp "x"), ConstExp (IntConst 7)), []));
+
+(* Problem 6 *)
+TEST2ARG(1, monOpApply, IntNegOp, (IntVal 2));
+
+TEST1ARG(1, eval_exp, (MonOpAppExp(IntNegOp, ConstExp (IntConst 2)), []));
+
+(* Problem 7 *)
+TEST3ARG(1, binOpApply, IntPlusOp, (IntVal 2), (IntVal 3));
+
+(* parse "3 + 4;" *)
+TEST1ARG(1, eval_exp, (BinOpAppExp(IntPlusOp,
+                                   ConstExp(IntConst(3)),
+                                   ConstExp(IntConst(4))),  []));
+
+(* Problem 8 *)
+(* parse "if true then 1 else 0;" *)
+TEST1ARG(1, eval_exp, (IfExp(ConstExp(BoolConst true), 
+                            ConstExp(IntConst 1), ConstExp(IntConst 0)), []));
+
+(* Problem 9 *)
+(* parse "let val y = 5 in y end;" *)
+TEST1ARG(1, eval_exp, (LetExp (Val ("y", ConstExp (IntConst 5)), VarExp "y"), []));
+
+]
+
+(* Declaration test cases should go in this list.
+ * The first element of the pair is the weight of the case,
+ * and the second is the string to be given to the parser.
+ *)
+
+let eval_dec_test_cases = [
+(* Problem 1 *)
+(* These are above
+1, "(* Q1  and Q2*) 2;"; 
+
+(* Problem 3 *)
+1, "(* Q3 *) val x = 4;";
+*)
+
+(* Problem 10 *)
+(1, "(* Q10 *) val x = 4 val y = \"hi\";");
+
+
+(* Problem 11 *)
+(1, "(* Q11 *) local val x = 3 in val y = (x, 3.14) end;");
+
+(* Problem 12 *)
+(1, "(* Q12 *) val rec even x = if x = 0 then true else if x = 1 then false else even (x - 2);");
+
+(*Problem 13*)
+(1, "(* Q13 *) val rec f x = if x = 0 then 1 else x * f (x - 1)  val y = f 3 ;;")
+]
+
+let rubric = eval_exp_tests @ 
+             (List.map 
+             (fun (w,s) -> TEST2SARG(w, eval_dec, s, []))
+             eval_dec_test_cases)
+
+
+(* This list is for extra credit problems *)
+let extra_test_cases = [ 
+(* Problem 14 *)
+(1, "(* Q14 *) let val f = fn x => raise 4 in f 17.0 15 end;");
+(*Problem 15*)
+(1, "(* Q15 *) raise 1;");
+(*Problem 16*)
+(1, "(* Q16 *) 4/0;");
+(*Problem 17*)
+(1, "(* Q17 *) 4 / 0 handle 0 => 9999;")
+]
+
+let extra_rubric = List.map 
+             (fun (w,s) -> TEST2SARG(w, eval_dec, s, []))
+             extra_test_cases

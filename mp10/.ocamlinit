@@ -1,0 +1,6 @@
+#load "mp10common.cmo";;
+#load "micromlparse.cmo";;
+#load "micromllex.cmo";;
+#load "solution.cmo";;
+open Mp10common;;
+#use "mp10.ml";;
